@@ -6,15 +6,15 @@
 /*   By: pandalaf <pandalaf@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/25 18:13:32 by pandalaf          #+#    #+#             */
-/*   Updated: 2022/04/25 18:23:29 by pandalaf         ###   ########.fr       */
+/*   Updated: 2022/04/26 12:20:10 by pandalaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-Function returns 1 if the strings are the same, 0 otherwise
-Check character for character if they are the same, the first encounter with a
-different character it will return 0, after going through all without this
-happening, return 1.
+Function checks if strings are exactly equal.
+Function returns 1 if they are, 0 otherwise.
+Check character for character whether they are the same, when they are different,
+return 0, if it hasn't happened by the end, return 1.
 */
 int	ft_strcmp(char *s1, char *s2)
 {
@@ -30,8 +30,7 @@ int	ft_strcmp(char *s1, char *s2)
 	return (1);
 }
 
-/*
-Test
+/* Test
 #include <stdio.h>
 #include <string.h>
 
