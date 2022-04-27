@@ -6,9 +6,16 @@
 /*   By: pandalaf <pandalaf@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/25 19:26:47 by pandalaf          #+#    #+#             */
-/*   Updated: 2022/04/26 15:45:46 by pandalaf         ###   ########.fr       */
+/*   Updated: 2022/04/27 22:37:34 by pandalaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
+
+//Function determines whether input character is alphanumeric.
+int	ft_isalpha(char ch);
+//Function determines whether input character is a digit.
+int	ft_isdigit(char ch);
+
+#endif
