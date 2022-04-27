@@ -1,0 +1,15 @@
+Notes:
+libft.a - final
+-- .a is an extension signifying static library
+libft.h - library
+-- must compile functions as objects first
+-- .o files called "bricks" in intra videos
+-----.o objects get made from compiling just functions without mains (gcc -c option)
+-- library composed by using command ar with options/instructions rc (ar rc)
+
+-- gcc -L. | tell gcc to look for a library in the current directory
+-- gcc -L -lstr | library string to look for str (?)
+
+-- ranlib
+---- creates index in library to access functions more quickly (for when 100s of functions etc. exist)
+---- saves time when compiling
