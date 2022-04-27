@@ -6,7 +6,7 @@
 /*   By: pandalaf <pandalaf@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/26 10:55:27 by pandalaf          #+#    #+#             */
-/*   Updated: 2022/04/26 12:11:15 by pandalaf         ###   ########.fr       */
+/*   Updated: 2022/04/27 21:30:38 by pandalaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ Check whether alphanumeric, return 0 if not.
 int	ft_isalpha(char ch)
 {
 	if (!((ch > '@' && ch < '[') || (ch > '`' && ch < '{')))
-		return (0);
-	return (1);
+		return ((int) 0);
+	return ((int) 1);
 }
 
 /* Test
