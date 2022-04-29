@@ -17,3 +17,5 @@ libft.h - library
 Makefile
 -- special variables
 ----- https://www.gnu.org/software/make/manual/html_node/Automatic-Variables.html#Automatic-Variables
+Tutorial
+-- 42 NL dude: https://noahloomans.com/tutorials/makefile/
