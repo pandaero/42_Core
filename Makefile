@@ -15,12 +15,14 @@ CC := gcc
 CFLAGS := -Wall -Wextra -Werror
 SRCS := ft_isalpha.c ft_isdigit.c
 OBJ_DIR := obj/
-OBJS := $(OBJ_DIR)$(SRCS:.c=.o)
+OBJS = $(addprefix $(OBJ_DIR), $(SRCS:.c=.o))
 
 all: $(NAME)
 
 $(NAME): $(OBJS)
 	ar rcs $@ $^
+
+.PHONY: clean fclean re
 
 clean:
 	rm -fr $(OBJ_DIR)
@@ -30,6 +32,9 @@ fclean: clean
 
 re: fclean all
 
-$(OBJS): $(SRCS)
+$(addprefix $(OBJ_DIR), %.o): %.c | $(OBJ_DIR)
+	$(CC) -c $(CFLAGS) $^ -o $@
+
+$(OBJ_DIR):
 	mkdir -p $(OBJ_DIR)
-	$(CC) $(CFLAGS) -c -o $@ $^
+	
