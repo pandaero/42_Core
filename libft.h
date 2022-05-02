@@ -12,7 +12,6 @@
 
 #ifndef LIBFT_H
 # define LIBFT_H
-# include <stdlib.h>
 
 //Function determines whether input character is alphanumeric.
 int	ft_isalpha(char ch);
