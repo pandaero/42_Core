@@ -6,14 +6,14 @@
 /*   By: pandalaf <pandalaf@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/26 10:55:27 by pandalaf          #+#    #+#             */
-/*   Updated: 2022/04/27 21:30:38 by pandalaf         ###   ########.fr       */
+/*   Updated: 2022/05/11 17:26:04 by pandalaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-Function checks if character is alphanumeric.
+Function checks if character is alphabetic.
 Function returns 1 if it does, 0 otherwise.
-Check whether alphanumeric, return 0 if not.
+Check whether alphabetic, return 0 if not.
 */
 
 int	ft_isalpha(char ch)
