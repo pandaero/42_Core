@@ -6,7 +6,7 @@
 /*   By: pandalaf <pandalaf@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 17:13:03 by pandalaf          #+#    #+#             */
-/*   Updated: 2022/05/13 18:05:35 by pandalaf         ###   ########.fr       */
+/*   Updated: 2022/05/15 15:17:24 by pandalaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int	ft_isprint(char ch)
 		return (1);
 	if (ch == '`' || (ch > 'z' && ch <= '~'))
 		return (1);
-	return(0);
+	return (0);
 }
 
 /* Test

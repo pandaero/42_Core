@@ -6,7 +6,7 @@
 /*   By: pandalaf <pandalaf@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 17:13:03 by pandalaf          #+#    #+#             */
-/*   Updated: 2022/05/13 15:39:14 by pandalaf         ###   ########.fr       */
+/*   Updated: 2022/05/15 15:18:25 by pandalaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ Uses both isalpha and isdigit to check, combines conditions, 0 if not.
 
 int	ft_isalnum(char ch)
 {
-	if((ft_isalpha(ch) == 1) || (ft_isdigit(ch) == 1))
+	if ((ft_isalpha(ch) == 1) || (ft_isdigit(ch) == 1))
 		return (1);
 	return (0);
 }

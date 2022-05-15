@@ -6,7 +6,7 @@
 /*   By: pandalaf <pandalaf@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 17:13:03 by pandalaf          #+#    #+#             */
-/*   Updated: 2022/05/13 17:09:30 by pandalaf         ###   ########.fr       */
+/*   Updated: 2022/05/15 15:17:54 by pandalaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int	ft_isascii(char ch)
 {
 	if (ch >= 0 && ch <= 127)
 		return (1);
-	return(0);
+	return (0);
 }
 
 /* Test
