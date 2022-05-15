@@ -19,3 +19,24 @@ Makefile
 ----- https://www.gnu.org/software/make/manual/html_node/Automatic-Variables.html#Automatic-Variables
 Tutorial
 -- 42 NL dude: https://noahloomans.com/tutorials/makefile/
+
+15/05/2022
+To Test (static library):
+Run test.c using:
+gcc -Wall -Werror -Wextra lib.a test.c
+
+size_t - data type defined in several standard libraries - stddef.h is most basic instance
+
+Bus error - attempting to access memory that does not exist.
+Segmentation fault - attempting to access memory that is not part of the program calling it.
+
+Void pointer stores a memory address, the memory can contain data of any type.
+
+open a folder in finder using command 'open' in terminal
+
+Testers: 
+https://github.com/Tripouille/libftTester
+-- enter directory
+----- run using make function for individual functions, or make for all
+
+gitignore wildcard character is: *
