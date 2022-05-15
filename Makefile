@@ -6,14 +6,14 @@
 #    By: pandalaf <pandalaf@student.42wolfsburg.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/28 10:39:51 by pandalaf          #+#    #+#              #
-#    Updated: 2022/05/13 18:03:13 by pandalaf         ###   ########.fr        #
+#    Updated: 2022/05/15 15:22:37 by pandalaf         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME := libft.a
 CC := gcc
 CFLAGS := -Wall -Wextra -Werror
-SRCS := ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c
+SRCS := ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c ft_strlen.c
 OBJ_DIR := obj/
 OBJS = $(addprefix $(OBJ_DIR), $(SRCS:.c=.o))
 
