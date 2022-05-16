@@ -6,7 +6,7 @@
 /*   By: pandalaf <pandalaf@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 17:13:03 by pandalaf          #+#    #+#             */
-/*   Updated: 2022/05/15 15:36:26 by pandalaf         ###   ########.fr       */
+/*   Updated: 2022/05/16 19:09:47 by pandalaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,11 @@ Function determines length of the string (number of characters contained in it).
 Result is number of characters before null terminator.
 Counts every character until the null terminator.
 */
+#include <stddef.h>
 
-unsigned long	ft_strlen(const char *str)
+size_t	ft_strlen(const char *str)
 {
-	unsigned long	i;
+	size_t	i;
 
 	i = 0;
 	while (str[i] != '\0')
@@ -26,7 +27,7 @@ unsigned long	ft_strlen(const char *str)
 	return (i);
 }
 
-//* Test
+/* Test
 #include <stdio.h>
 #include <string.h>
 
