@@ -6,7 +6,7 @@
 /*   By: pandalaf <pandalaf@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 17:13:03 by pandalaf          #+#    #+#             */
-/*   Updated: 2022/05/15 15:18:25 by pandalaf         ###   ########.fr       */
+/*   Updated: 2022/05/16 18:20:46 by pandalaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ Uses both isalpha and isdigit to check, combines conditions, 0 if not.
 */
 #include "libft.h"
 
-int	ft_isalnum(char ch)
+int	ft_isalnum(int ch)
 {
 	if ((ft_isalpha(ch) == 1) || (ft_isdigit(ch) == 1))
 		return (1);

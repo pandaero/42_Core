@@ -6,7 +6,7 @@
 /*   By: pandalaf <pandalaf@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 17:13:03 by pandalaf          #+#    #+#             */
-/*   Updated: 2022/05/15 15:17:24 by pandalaf         ###   ########.fr       */
+/*   Updated: 2022/05/16 18:22:06 by pandalaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ Uses ft_isalnum and ranges to check, returns 0 if not.
 */
 #include "libft.h"
 
-int	ft_isprint(char ch)
+int	ft_isprint(int ch)
 {
 	if (ft_isalnum(ch) == 1 || (ch >= ' ' && ch < 48) || (ch > 49 && ch < 58))
 		return (1);

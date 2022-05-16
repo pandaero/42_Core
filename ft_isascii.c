@@ -6,7 +6,7 @@
 /*   By: pandalaf <pandalaf@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 17:13:03 by pandalaf          #+#    #+#             */
-/*   Updated: 2022/05/15 15:17:54 by pandalaf         ###   ########.fr       */
+/*   Updated: 2022/05/16 18:21:00 by pandalaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ Returns 1 if it is, 0 otherwise.
 Uses range to check, returns 0 if not.
 */
 
-int	ft_isascii(char ch)
+int	ft_isascii(int ch)
 {
 	if (ch >= 0 && ch <= 127)
 		return (1);

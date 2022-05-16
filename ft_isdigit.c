@@ -6,7 +6,7 @@
 /*   By: pandalaf <pandalaf@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/26 14:08:57 by pandalaf          #+#    #+#             */
-/*   Updated: 2022/04/27 21:30:55 by pandalaf         ###   ########.fr       */
+/*   Updated: 2022/05/16 18:21:53 by pandalaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ Function returns 1 if it does, 0 otherwise.
 Check whether a digit, return 0 if not.
 */
 
-int	ft_isdigit(char ch)
+int	ft_isdigit(int ch)
 {
 	if (!((ch >= '0' && ch <= '9')))
 		return ((int) 0);

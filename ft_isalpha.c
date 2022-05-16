@@ -6,7 +6,7 @@
 /*   By: pandalaf <pandalaf@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/26 10:55:27 by pandalaf          #+#    #+#             */
-/*   Updated: 2022/05/11 17:26:04 by pandalaf         ###   ########.fr       */
+/*   Updated: 2022/05/16 18:20:22 by pandalaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ Function returns 1 if it does, 0 otherwise.
 Check whether alphabetic, return 0 if not.
 */
 
-int	ft_isalpha(char ch)
+int	ft_isalpha(int ch)
 {
 	if (!((ch > '@' && ch < '[') || (ch > '`' && ch < '{')))
 		return ((int) 0);
