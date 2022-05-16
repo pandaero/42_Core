@@ -5,3 +5,5 @@ ft_template.c
 .vscode/
 a.out.dSYM/
 Tester*/
+.DS_Store
+**/.DS_Store
