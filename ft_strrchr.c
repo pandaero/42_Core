@@ -6,15 +6,14 @@
 /*   By: pandalaf <pandalaf@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 17:13:03 by pandalaf          #+#    #+#             */
-/*   Updated: 2022/05/18 00:10:26 by pandalaf         ###   ########.fr       */
+/*   Updated: 2022/05/18 00:16:12 by pandalaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-Description of function
-Overview
-Output
-Process
+Function looks for the last instance of a character within a string pointer.
+Returns pointer to location of the character.
+Compares each character in string. Returns pointer last time it is the same.
 */
 
 char	*ft_strrchr(const char *str, int ch)
