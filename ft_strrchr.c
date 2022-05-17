@@ -6,15 +6,16 @@
 /*   By: pandalaf <pandalaf@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 17:13:03 by pandalaf          #+#    #+#             */
-/*   Updated: 2022/05/18 00:16:12 by pandalaf         ###   ########.fr       */
+/*   Updated: 2022/05/18 01:54:36 by pandalaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
 Function looks for the last instance of a character within a string pointer.
-Returns pointer to location of the character.
+Returns pointer to location of the character. Returns null pointer if not found.
 Compares each character in string. Returns pointer last time it is the same.
 */
+#include "libft.h"
 
 char	*ft_strrchr(const char *str, int ch)
 {
@@ -23,6 +24,8 @@ char	*ft_strrchr(const char *str, int ch)
 
 	i = 0;
 	ln = i;
+	if (ft_isascii(ch) == 0)
+		return ((char *) &str[i]);
 	while (str[i] != '\0')
 	{
 		if (str[i] == ch)
@@ -31,6 +34,8 @@ char	*ft_strrchr(const char *str, int ch)
 	}
 	if (ch == '\0' && str[i] == '\0')
 		ln = i;
+	if (ln == 0 && str[0] != ch && ch != '\0')
+		return ((char *) 0);
 	return ((char *) &str[ln]);
 }
 
