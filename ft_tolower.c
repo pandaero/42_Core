@@ -6,19 +6,22 @@
 /*   By: pandalaf <pandalaf@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 17:13:03 by pandalaf          #+#    #+#             */
-/*   Updated: 2022/05/16 18:44:00 by pandalaf         ###   ########.fr       */
+/*   Updated: 2022/05/17 21:28:03 by pandalaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
 Function takes an uppercase letter character and makes it a lowercase letter.
 Result is the lowercase value for the input character.
-The ASCII offset is simply added to give the uppercase value.
+Checks input, then ASCII offset is applied to give the lowercase value.
 */
 
+#include "libft.h"
 int	ft_tolower(int ch)
 {
-	return (ch + 32);
+	if (ch >= 'A' && ch <= 'Z')
+		return (ch + 32);
+	return (ch);
 }
 
 /* Test
