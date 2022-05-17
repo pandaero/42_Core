@@ -6,7 +6,7 @@
 /*   By: pandalaf <pandalaf@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 17:13:03 by pandalaf          #+#    #+#             */
-/*   Updated: 2022/05/17 21:28:03 by pandalaf         ###   ########.fr       */
+/*   Updated: 2022/05/17 22:45:20 by pandalaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@ Result is the lowercase value for the input character.
 Checks input, then ASCII offset is applied to give the lowercase value.
 */
 
-#include "libft.h"
 int	ft_tolower(int ch)
 {
 	if (ch >= 'A' && ch <= 'Z')
@@ -32,8 +31,12 @@ int	main(void)
 {
 	int	ch;
 
-	ch = 65;
+	ch = 'A';
+	printf("Mine:\n");
 	printf("Before: %c, After: %c\n", ch, ft_tolower(ch));
+	printf("Library:\n");
+	ch--;
+	printf("Before: %c, After: %c\n", ch, tolower(ch));
 	return (0);
 }
 //*/
