@@ -6,7 +6,7 @@
 /*   By: pandalaf <pandalaf@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 17:13:03 by pandalaf          #+#    #+#             */
-/*   Updated: 2022/05/17 23:46:22 by pandalaf         ###   ########.fr       */
+/*   Updated: 2022/05/18 00:11:35 by pandalaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ char	*ft_strchr(const char *str, int ch)
 	return ((char *) &str[i]);
 }
 
-//* Test
+/* Test
 #include <stdio.h>
 #include <string.h>
 
