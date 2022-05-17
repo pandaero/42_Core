@@ -6,7 +6,7 @@
 /*   By: pandalaf <pandalaf@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/25 19:26:47 by pandalaf          #+#    #+#             */
-/*   Updated: 2022/05/16 18:56:11 by pandalaf         ###   ########.fr       */
+/*   Updated: 2022/05/17 23:06:21 by pandalaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,8 @@ int				ft_isascii(int ch);
 int				ft_isprint(int ch);
 //Function determines length of the string.
 size_t			ft_strlen(const char *str);
+//Function looks for a character within a string pointer.
+char			*ft_strchr(const char *str, int ch);
 //Function writes a value to a determined length of bytes in memory.
 void			ft_memset(void *byte, int ch, size_t len);
 //Function sets determined length of memory in a string to zero.
