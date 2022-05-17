@@ -6,7 +6,7 @@
 /*   By: pandalaf <pandalaf@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 17:13:03 by pandalaf          #+#    #+#             */
-/*   Updated: 2022/05/17 00:47:25 by pandalaf         ###   ########.fr       */
+/*   Updated: 2022/05/17 23:46:22 by pandalaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ char	*ft_strchr(const char *str, int ch)
 	return ((char *) &str[i]);
 }
 
-/* Test
+//* Test
 #include <stdio.h>
 #include <string.h>
 
@@ -38,11 +38,13 @@ int	main(void)
 {
 	char	str[] = "Word";
 	char	ch = 'o';
+	char	*ptr;
 
 	printf("----|----|----|----\n");
 	printf("String: %s, Address: %x\nChar:   %c, Address: %x\n",
-			str, &str, ch, &ch);
-	printf("Search address: %x\n", &ft_strchr(str, ch));
+			str, *str, ch, ch);
+	ptr = ft_strchr(str, ch);
+	printf("Search address: %x\n", *ptr);
 	return (0);
 }
 //*/
