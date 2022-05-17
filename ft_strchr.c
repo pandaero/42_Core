@@ -6,28 +6,33 @@
 /*   By: pandalaf <pandalaf@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 17:13:03 by pandalaf          #+#    #+#             */
-/*   Updated: 2022/05/18 00:11:35 by pandalaf         ###   ########.fr       */
+/*   Updated: 2022/05/18 00:59:51 by pandalaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
 Function looks for a character within a string pointer.
-Returns pointer to location of the character.
+Returns pointer to location of character. If invalid, returns string pointer.
 Compares each character in string. Returns pointer first time it is the same.
 */
+#include "libft.h"
 
 char	*ft_strchr(const char *str, int ch)
 {
-	int	i;
+	int		i;
 
 	i = 0;
-	while (str[i] != ch)
+	if (ft_isascii(ch) == 0)
+		return ((char *) &str[i]);
+	while (str[i] != '\0')
 	{
 		if (str[i] == ch)
 			return ((char *) &str[i]);
 		i++;
 	}
-	return ((char *) &str[i]);
+	if (ch == '\0' && str[i] == '\0')
+		return ((char *) &str[i]);
+	return ((char *) 0);
 }
 
 /* Test
