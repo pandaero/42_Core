@@ -6,19 +6,21 @@
 /*   By: pandalaf <pandalaf@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 17:13:03 by pandalaf          #+#    #+#             */
-/*   Updated: 2022/05/16 18:43:57 by pandalaf         ###   ########.fr       */
+/*   Updated: 2022/05/17 22:30:04 by pandalaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
 Function takes a lowercase letter character and makes it an uppercase letter.
 Result is the uppercase value for the input character.
-The ASCII offset is simply subtracted to give the uppercase value.
+Checks input, then ASCII offset is applied to give the uppercase value.
 */
 
 int	ft_toupper(int ch)
 {
-	return (ch - 32);
+	if (ch >= 'a' && ch <= 'z')
+		return (ch - 32);
+	return (ch);
 }
 
 /* Test
@@ -29,8 +31,12 @@ int	main(void)
 {
 	int	ch;
 
-	ch = 97;
+	ch = 'a';
+	printf("Mine:\n");
 	printf("Before: %c, After: %c\n", ch, ft_toupper(ch));
+	printf("Library:\n");
+	ch--;
+	printf("Before: %c, After: %c\n", ch, toupper(ch));
 	return (0);
 }
 //*/
