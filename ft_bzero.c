@@ -6,7 +6,7 @@
 /*   By: pandalaf <pandalaf@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 17:13:03 by pandalaf          #+#    #+#             */
-/*   Updated: 2022/05/15 21:08:31 by pandalaf         ###   ########.fr       */
+/*   Updated: 2022/05/18 02:45:46 by pandalaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	ft_bzero(void *str, size_t len)
 	ft_memset(str, 0, len);
 }
 
-/* Test
+/* Test | gcc -Wall -Werror -Wextra ft_bzero.c && ./a.out
 #include <stdio.h>
 
 int	main(void)

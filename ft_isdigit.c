@@ -6,7 +6,7 @@
 /*   By: pandalaf <pandalaf@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/26 14:08:57 by pandalaf          #+#    #+#             */
-/*   Updated: 2022/05/16 18:21:53 by pandalaf         ###   ########.fr       */
+/*   Updated: 2022/05/18 02:46:33 by pandalaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	ft_isdigit(int ch)
 	return ((int) 1);
 }
 
-/* Test
+/* Test | gcc -Wall -Werror -Wextra ft_isdigit.c && ./a.out
 #include <stdio.h>
 #include <ctype.h>
 

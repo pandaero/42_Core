@@ -6,7 +6,7 @@
 /*   By: pandalaf <pandalaf@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 17:13:03 by pandalaf          #+#    #+#             */
-/*   Updated: 2022/05/17 22:45:20 by pandalaf         ###   ########.fr       */
+/*   Updated: 2022/05/18 02:47:49 by pandalaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	ft_tolower(int ch)
 	return (ch);
 }
 
-/* Test
+/* Test | gcc -Wall -Werror -Wextra ft_tolower.c && ./a.out
 #include <stdio.h>
 #include <ctype.h>
 
