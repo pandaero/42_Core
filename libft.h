@@ -6,7 +6,7 @@
 /*   By: pandalaf <pandalaf@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/25 19:26:47 by pandalaf          #+#    #+#             */
-/*   Updated: 2022/05/18 02:34:45 by pandalaf         ###   ########.fr       */
+/*   Updated: 2022/05/18 17:56:39 by pandalaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,5 +40,7 @@ int				ft_strncmp(const char *str1, const char *str2, size_t n);
 void			ft_memset(void *byte, int ch, size_t len);
 //Function sets determined length of memory in a memory location to zero.
 void			ft_bzero(void *str, size_t len);
+//Function locates the first instance of a character within a string.
+void			*ft_memchr(const void *str, int ch, size_t n);
 
 #endif
