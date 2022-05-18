@@ -6,7 +6,7 @@
 /*   By: pandalaf <pandalaf@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/25 19:26:47 by pandalaf          #+#    #+#             */
-/*   Updated: 2022/05/17 23:06:21 by pandalaf         ###   ########.fr       */
+/*   Updated: 2022/05/18 02:34:45 by pandalaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,9 +32,13 @@ int				ft_isprint(int ch);
 size_t			ft_strlen(const char *str);
 //Function looks for a character within a string pointer.
 char			*ft_strchr(const char *str, int ch);
-//Function writes a value to a determined length of bytes in memory.
+//Function looks for the last instance of a character within a string pointer.
+char			*ft_strrchr(const char *str, int ch);
+//Function compares two strings, gives difference when not equal.
+int				ft_strncmp(const char *str1, const char *str2, size_t n);
+//Function writes a value to a determined length of bytes to a memory location.
 void			ft_memset(void *byte, int ch, size_t len);
-//Function sets determined length of memory in a string to zero.
+//Function sets determined length of memory in a memory location to zero.
 void			ft_bzero(void *str, size_t len);
 
 #endif
