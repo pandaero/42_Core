@@ -6,7 +6,7 @@
 /*   By: pandalaf <pandalaf@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/25 19:26:47 by pandalaf          #+#    #+#             */
-/*   Updated: 2022/05/18 17:56:39 by pandalaf         ###   ########.fr       */
+/*   Updated: 2022/05/19 10:47:16 by pandalaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,5 +42,7 @@ void			ft_memset(void *byte, int ch, size_t len);
 void			ft_bzero(void *str, size_t len);
 //Function locates the first instance of a character within a string.
 void			*ft_memchr(const void *str, int ch, size_t n);
+//Function compares two byte strings for equality
+int				ft_memcmp(const void *str1, const void *str2, size_t n);
 
 #endif
