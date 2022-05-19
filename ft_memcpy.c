@@ -6,7 +6,7 @@
 /*   By: pandalaf <pandalaf@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 17:13:03 by pandalaf          #+#    #+#             */
-/*   Updated: 2022/05/19 22:19:04 by pandalaf         ###   ########.fr       */
+/*   Updated: 2022/05/19 22:21:16 by pandalaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,8 +46,10 @@ int	main(void)
 	char	dstcpy[] = "500.000";
 
 	printf("----|-Test|----\n");
-	printf("Mine|-- Before: %s, Src: %s, After: %s\n", dstcpy, src, (char *) ft_memcpy(dst, src,3));
-	printf("Lib-|-- Before: %s, Src: %s, After: %s\n", dstcpy, src, (char *) memcpy(dstfn, src, 3));
+	printf("Mine|-- Before: %s, Src: %s, After: %s\n",
+			dstcpy, src, (char *) ft_memcpy(dst, src,3));
+	printf("Lib-|-- Before: %s, Src: %s, After: %s\n",
+			dstcpy, src, (char *) memcpy(dstfn, src, 3));
 	return (0);
 }
 //*/
