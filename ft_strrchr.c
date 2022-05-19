@@ -6,7 +6,7 @@
 /*   By: pandalaf <pandalaf@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 17:13:03 by pandalaf          #+#    #+#             */
-/*   Updated: 2022/05/18 02:47:34 by pandalaf         ###   ########.fr       */
+/*   Updated: 2022/05/19 22:26:59 by pandalaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ Compares each character in string. Returns pointer last time it is the same.
 char	*ft_strrchr(const char *str, int ch)
 {
 	int	i;
-	int ln;
+	int	ln;
 
 	i = 0;
 	ln = i;

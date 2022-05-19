@@ -6,7 +6,7 @@
 /*   By: pandalaf <pandalaf@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 17:13:03 by pandalaf          #+#    #+#             */
-/*   Updated: 2022/05/19 22:21:16 by pandalaf         ###   ########.fr       */
+/*   Updated: 2022/05/19 22:22:19 by pandalaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 		pdst[i] = psrc[i];
 		i++;
 	}
-	return((void *) dst);
+	return ((void *) dst);
 }
 
 /* Test
