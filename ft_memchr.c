@@ -6,7 +6,7 @@
 /*   By: pandalaf <pandalaf@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 17:13:03 by pandalaf          #+#    #+#             */
-/*   Updated: 2022/05/18 21:05:01 by pandalaf         ###   ########.fr       */
+/*   Updated: 2022/05/20 13:09:10 by pandalaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ void	*ft_memchr(const void *str, int ch, size_t n)
 	return ((void *) 0);
 }
 
-/* Test
+/* Test | gcc -Wall -Werror -Wextra ft_memchr.c && ./a.out
 #include <stdio.h>
 #include <string.h>
 
