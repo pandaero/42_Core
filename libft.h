@@ -6,7 +6,7 @@
 /*   By: pandalaf <pandalaf@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/25 19:26:47 by pandalaf          #+#    #+#             */
-/*   Updated: 2022/05/19 22:06:17 by pandalaf         ###   ########.fr       */
+/*   Updated: 2022/05/20 15:15:42 by pandalaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,5 +46,7 @@ void			*ft_memchr(const void *str, int ch, size_t n);
 int				ft_memcmp(const void *str1, const void *str2, size_t n);
 //Function copies n bytes (char 8-bits) from a string to a different string.
 void			*ft_memcpy(void *dst, const void *src, size_t n);
+//Function moves n bytes (char 8-bits) from source string to dest string.
+void			*ft_memmove(void *dst, const void *src, size_t n);
 
 #endif
