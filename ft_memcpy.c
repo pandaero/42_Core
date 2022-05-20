@@ -6,7 +6,7 @@
 /*   By: pandalaf <pandalaf@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 17:13:03 by pandalaf          #+#    #+#             */
-/*   Updated: 2022/05/19 22:22:19 by pandalaf         ###   ########.fr       */
+/*   Updated: 2022/05/20 13:07:57 by pandalaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	return ((void *) dst);
 }
 
-/* Test
+/* Test | gcc -Wall -Werror -Wextra ft_memcpy.c && ./a.out
 #include <stdio.h>
 #include <string.h>
 

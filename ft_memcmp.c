@@ -6,7 +6,7 @@
 /*   By: pandalaf <pandalaf@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 17:13:03 by pandalaf          #+#    #+#             */
-/*   Updated: 2022/05/19 19:41:16 by pandalaf         ###   ########.fr       */
+/*   Updated: 2022/05/20 13:08:22 by pandalaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ int	ft_memcmp(const void *str1, const void *str2, size_t n)
 	return (0);
 }
 
-/* Test
+/* Test | gcc -Wall -Werror -Wextra ft_memcmp.c && ./a.out
 #include <stdio.h>
 #include <string.h>
 
