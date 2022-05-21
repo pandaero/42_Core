@@ -6,7 +6,7 @@
 /*   By: pandalaf <pandalaf@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 17:13:03 by pandalaf          #+#    #+#             */
-/*   Updated: 2022/05/21 19:51:35 by pandalaf         ###   ########.fr       */
+/*   Updated: 2022/05/21 19:53:37 by pandalaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,15 +22,15 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t sizedst)
 	unsigned int	i;
 
 	i = 0;
-	if(sizedst != 0)
+	if (sizedst != 0)
+	{
+		while (sizedst - 1 > i && src[i] != '\0')
 		{
-			while (sizedst - 1 > i && src[i] != '\0')
-				{
-					dst[i] = src[i];
-					i++;
-				}
-			dst[i] = '\0';
+			dst[i] = src[i];
+			i++;
 		}
+		dst[i] = '\0';
+	}
 	if (sizedst == 1)
 		dst[0] = '\0';
 	while (src[i] != '\0')
@@ -52,8 +52,10 @@ int	main(void)
 	memset(dst, 'A', 10);
 	memset(dstcpy, 'A', 10);
 	memset(dstlib, 'A', 10);
-	printf("Test: dst-%s, src-%s, n-%d, ft_s..-%zu dst*-%s\n", dstcpy, src, 2, ft_strlcpy(dst, src, 2), dst);
-	printf("Lib : dst-%s, src-%s, n-%d, strl..-%lu dst*-%s\n", dstcpy, src, 2, strlcpy(dstlib, src, 2), dstlib);
+	printf("Test: dst-%s, src-%s, n-%d, ft_s..-%zu dst*-%s\n",
+			dstcpy, src, 2, ft_strlcpy(dst, src, 2), dst);
+	printf("Lib : dst-%s, src-%s, n-%d, strl..-%lu dst*-%s\n",
+			dstcpy, src, 2, strlcpy(dstlib, src, 2), dstlib);
 	return (0);
 }
 //*/
