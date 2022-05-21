@@ -6,15 +6,14 @@
 /*   By: pandalaf <pandalaf@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 17:13:03 by pandalaf          #+#    #+#             */
-/*   Updated: 2022/05/21 18:05:21 by pandalaf         ###   ########.fr       */
+/*   Updated: 2022/05/21 19:23:50 by pandalaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-Description of function
-Overview
-Output
-Process
+Function writes to n bytes of a character string from a source to a destination.
+Outputs the size of the attempted copy string.
+For non-zero destination sizes, overwrites destination with source.
 */
 #include<stddef.h>
 
