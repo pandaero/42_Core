@@ -6,7 +6,7 @@
 /*   By: pandalaf <pandalaf@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 17:13:03 by pandalaf          #+#    #+#             */
-/*   Updated: 2022/05/22 00:53:08 by pandalaf         ###   ########.fr       */
+/*   Updated: 2022/05/22 01:47:20 by pandalaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 }
 
 /* Test
-//gcc -Wall -Werror -Wextra ft_strlcat.c ft_strlcpy.c ft_strlen.c&& ./a.out
+//gcc -Wall -Werror -Wextra ft_strlcat.c ft_strlcpy.c ft_strlen.c && ./a.out
 #include <stdio.h>
 #include <string.h>
 
