@@ -54,5 +54,5 @@ git remote -v
 Pushing to two servers on push, and pulling from them
 https://stackoverflow.com/questions/9049773/how-to-git-push-to-two-serversmirror
 
-C commenting guidelines from somewhere
+C commenting guidelines from somewhere psych
 http://syque.com/cstyle/ch4.5.htm
