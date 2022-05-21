@@ -40,3 +40,19 @@ https://github.com/Tripouille/libftTester
 ----- run using make function for individual functions, or make for all
 
 gitignore wildcard character is: *
+
+21/05/2022
+Duplicating repository with commit history, etc. to GitHub
+https://medium.com/cloud-native-the-gathering/how-to-mirror-copy-an-entire-existing-git-repository-into-a-new-one-3bb8faefad9e
+
+Re-naming a branch
+git branch -m oldname newname
+
+Checking remotes
+git remote -v
+
+Pushing to two servers on push, and pulling from them
+https://stackoverflow.com/questions/9049773/how-to-git-push-to-two-serversmirror
+
+C commenting guidelines from somewhere
+http://syque.com/cstyle/ch4.5.htm
