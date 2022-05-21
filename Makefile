@@ -6,7 +6,7 @@
 #    By: pandalaf <pandalaf@student.42wolfsburg.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/28 10:39:51 by pandalaf          #+#    #+#              #
-#    Updated: 2022/05/20 13:01:45 by pandalaf         ###   ########.fr        #
+#    Updated: 2022/05/20 17:43:10 by pandalaf         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ CFLAGS := -Wall -Wextra -Werror
 SRCS :=	ft_isalpha.c ft_toupper.c ft_isdigit.c ft_tolower.c ft_isalnum.c \
 		ft_isascii.c ft_isprint.c ft_strlen.c ft_strchr.c ft_strrchr.c \
 		ft_strncmp.c ft_memset.c ft_bzero.c ft_memchr.c ft_memcmp.c ft_memcpy.c\
-		ft_memcpy.c ft_memmove.c
+		ft_memcpy.c ft_memmove.c ft_strlcpy.c
 		
 OBJ_DIR := obj/
 OBJS = $(addprefix $(OBJ_DIR), $(SRCS:.c=.o))

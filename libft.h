@@ -6,7 +6,7 @@
 /*   By: pandalaf <pandalaf@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/25 19:26:47 by pandalaf          #+#    #+#             */
-/*   Updated: 2022/05/20 15:15:42 by pandalaf         ###   ########.fr       */
+/*   Updated: 2022/05/20 17:43:09 by pandalaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,13 +40,15 @@ int				ft_strncmp(const char *str1, const char *str2, size_t n);
 void			ft_memset(void *byte, int ch, size_t len);
 //Function sets determined length of memory in a memory location to zero.
 void			ft_bzero(void *str, size_t len);
-//Function locates the first instance of a character within a string.
+//Function locates the first instance of a character within n bytes of a string.
 void			*ft_memchr(const void *str, int ch, size_t n);
-//Function compares two byte strings for equality
+//Function compares two memory strings for equality within n bytes of a string.
 int				ft_memcmp(const void *str1, const void *str2, size_t n);
 //Function copies n bytes (char 8-bits) from a string to a different string.
 void			*ft_memcpy(void *dst, const void *src, size_t n);
 //Function moves n bytes (char 8-bits) from source string to dest string.
 void			*ft_memmove(void *dst, const void *src, size_t n);
+//Function
+size_t			ft_strlcpy(char *dst, const char *src, size_t sizedst);
 
 #endif
