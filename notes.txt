@@ -59,3 +59,32 @@ http://syque.com/cstyle/ch4.5.htm
 
 Change head of the remote
 git remote set-head -d/-a
+
+22/05/22
+Conditional operator:?
+([condition])?[value if true]:[value if false]
+https://stackoverflow.com/questions/57858964/how-to-write-absolute-value-in-c
+
+Signed integer representations
+https://en.wikipedia.org/wiki/Signed_number_representations
+-- Sign-magnitude
+---- The first bit (sign bit) is completely sacrificed to represent negative sign.
+---- The rest of the bits represent the magnitude of the number.
+---- It means that 0 and -0 exist.
+---- In 4-bit: 0000:0, 0111:7, 1000:-0, 1111:-7
+-- Ones' complement
+---- The bitwise NOT (complement) corresponds to a negative number.
+---- Complement example: 0101 -> 1010 (5 -> -5)
+---- Bit-wise, binary addition requires end-around carry at limit.
+------ 1110:-1 + 0010:2 = (1) 0000:0, but not correct, carry 1, then 0001:1, correct.
+---- In 4-bit: 0000:0, 0111:7, 1000:-7, 1111:-0
+-- Two's complement
+---- Negative number represented by bitwise NOT (complement), plus 1.
+---- No multiple zero. (0 and -0).
+---- No end-around carry required.
+---- Complement + 1: 0010:2 (neg)-> 1101 + 0001 = 1110:-2
+---- In 4-bit: 0000: 0, 0111:7, 1000:-8, 1111:-1
+
+a C Integer type uses the two's complement representation.
+Ranges are thus (-2ˆ(n-1)) - (2ˆ(n-1) - 1) where n is the bit-resolution.
+-- negative has more range.
