@@ -6,7 +6,7 @@
 /*   By: pandalaf <pandalaf@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/25 19:26:47 by pandalaf          #+#    #+#             */
-/*   Updated: 2022/05/22 00:53:09 by pandalaf         ###   ########.fr       */
+/*   Updated: 2022/05/22 20:55:52 by pandalaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,5 +52,7 @@ void			*ft_memmove(void *dst, const void *src, size_t n);
 size_t			ft_strlcpy(char *dst, const char *src, size_t sizedst);
 //Function appends n bytes of a source character string to a destination string.
 size_t			ft_strlcat(char *dst, const char *src, size_t sizedst);
+//Function locates string within n in another string. Returns ptr to location.
+char			*ft_strnstr(const char *srch, const char *term, size_t srlen);
 
 #endif
