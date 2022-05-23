@@ -88,3 +88,7 @@ https://en.wikipedia.org/wiki/Signed_number_representations
 a C Integer type uses the two's complement representation.
 Ranges are thus (-2ˆ(n-1)) - (2ˆ(n-1) - 1) where n is the bit-resolution.
 -- negative has more range.
+
+23/05/2022
+!ptr : (ptr == ((void *) 0));
+NULL : ((void *) 0);
