@@ -6,7 +6,7 @@
 /*   By: pandalaf <pandalaf@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 17:13:03 by pandalaf          #+#    #+#             */
-/*   Updated: 2022/05/22 23:36:57 by pandalaf         ###   ########.fr       */
+/*   Updated: 2022/05/23 14:46:20 by pandalaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,9 +55,10 @@ int	ft_atoi(const char *str)
 
 int	main(void)
 {
-	char	a[] = "+54lasdf";
+	char	a[] = "+4294967297lasdf";
 
 	printf("Test- str:%s, out:%d\n", a, ft_atoi(a));
+	printf("Test- str:%s, out:%d\n", a, atoi(a));
 	return (0);
 }
 //*/
