@@ -6,7 +6,7 @@
 /*   By: pandalaf <pandalaf@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 17:13:03 by pandalaf          #+#    #+#             */
-/*   Updated: 2022/05/23 14:46:20 by pandalaf         ###   ########.fr       */
+/*   Updated: 2022/05/23 15:32:05 by pandalaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,15 +21,15 @@ static int	ft_isspace(int ch)
 {
 	if (ch == ' ')
 		return (1);
-	else if (ch == '\f' || ch == '\n' || ch == '\r'|| ch == '\t' || ch == '\v')
+	else if (ch == '\f' || ch == '\n' || ch == '\r' || ch == '\t' || ch == '\v')
 		return (1);
 	return (0);
 }
 
 int	ft_atoi(const char *str)
 {
-	int	sum;
-	int	sign;
+	long long unsigned int	sum;
+	int						sign;
 
 	sum = 0;
 	sign = 1;
@@ -45,8 +45,10 @@ int	ft_atoi(const char *str)
 	{
 		sum = sum * 10 + (*str - '0');
 		str++;
+		if (sum > 9223372036854775807)
+			return (-1);
 	}
-	return (sign * sum);
+	return ((int) sign * sum);
 }
 
 /* Test | gcc -Wall -Werror -Wextra ft_atoi.c && ./a.out
@@ -55,10 +57,22 @@ int	ft_atoi(const char *str)
 
 int	main(void)
 {
-	char	a[] = "+4294967297lasdf";
+	char	a[] = "+9223372036854775808lasdf";
+	char	a32[] = "+4294967296lasdf";
+	char	a32_p1[] = "+4294967297lasdf";
+	char	a64[] = "+9223372036854775807lasdf";
+	char	a64_p1[] = "+9223372036854775818lasdf";
 
 	printf("Test- str:%s, out:%d\n", a, ft_atoi(a));
 	printf("Test- str:%s, out:%d\n", a, atoi(a));
+	printf("T32 - str:%s         , out:%d\n", a32, ft_atoi(a32));
+	printf("T32 - str:%s         , out:%d\n", a32, atoi(a32));
+	printf("T32+- str:%s         , out:%d\n", a32_p1, ft_atoi(a32_p1));
+	printf("T32+- str:%s         , out:%d\n", a32_p1, atoi(a32_p1));
+	printf("T64 - str:%s, out:%d\n", a64, ft_atoi(a64));
+	printf("T64 - str:%s, out:%d\n", a64, atoi(a64));
+	printf("T64+- str:%s, out:%d\n", a64_p1, ft_atoi(a64_p1));
+	printf("T64+- str:%s, out:%d\n", a64_p1, atoi(a64_p1));
 	return (0);
 }
 //*/
