@@ -6,7 +6,7 @@
 /*   By: pandalaf <pandalaf@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 17:13:03 by pandalaf          #+#    #+#             */
-/*   Updated: 2022/05/21 19:53:37 by pandalaf         ###   ########.fr       */
+/*   Updated: 2022/05/24 19:16:27 by pandalaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t sizedst)
 
 int	main(void)
 {
+	unsigned int n = 4;
 	char dst[10];
 	char dstcpy[10];
 	char dstlib[10];
@@ -53,9 +54,9 @@ int	main(void)
 	memset(dstcpy, 'A', 10);
 	memset(dstlib, 'A', 10);
 	printf("Test: dst-%s, src-%s, n-%d, ft_s..-%zu dst*-%s\n",
-			dstcpy, src, 2, ft_strlcpy(dst, src, 2), dst);
+			dstcpy, src, n, ft_strlcpy(dst, src, n), dst);
 	printf("Lib : dst-%s, src-%s, n-%d, strl..-%lu dst*-%s\n",
-			dstcpy, src, 2, strlcpy(dstlib, src, 2), dstlib);
+			dstcpy, src, n, strlcpy(dstlib, src, n), dstlib);
 	return (0);
 }
 //*/
