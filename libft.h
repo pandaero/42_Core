@@ -6,7 +6,7 @@
 /*   By: pandalaf <pandalaf@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/25 19:26:47 by pandalaf          #+#    #+#             */
-/*   Updated: 2022/05/23 12:03:02 by pandalaf         ###   ########.fr       */
+/*   Updated: 2022/05/24 19:03:23 by pandalaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,5 +58,7 @@ char			*ft_strnstr(const char *srch, const char *term, size_t srlen);
 int				ft_atoi(const char *str);
 //Function allocates memory for a number of objects of a certain size in bytes.
 void			*ft_calloc(size_t count, size_t size);
+//Function duplicates a string to a new memory location.
+char			*ft_strdup(const char *str);
 
 #endif
