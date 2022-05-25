@@ -6,7 +6,7 @@
 /*   By: pandalaf <pandalaf@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/25 19:26:47 by pandalaf          #+#    #+#             */
-/*   Updated: 2022/05/24 19:03:23 by pandalaf         ###   ########.fr       */
+/*   Updated: 2022/05/25 17:18:11 by pandalaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,5 +60,7 @@ int				ft_atoi(const char *str);
 void			*ft_calloc(size_t count, size_t size);
 //Function duplicates a string to a new memory location.
 char			*ft_strdup(const char *str);
+//Function creates new character string from another character string's content.
+char			*ft_substr(char const *s, unsigned int start, size_t len);
 
 #endif
