@@ -6,7 +6,7 @@
 /*   By: pandalaf <pandalaf@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/25 19:26:47 by pandalaf          #+#    #+#             */
-/*   Updated: 2022/05/25 17:18:11 by pandalaf         ###   ########.fr       */
+/*   Updated: 2022/05/26 17:09:24 by pandalaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,5 +62,7 @@ void			*ft_calloc(size_t count, size_t size);
 char			*ft_strdup(const char *str);
 //Function creates new character string from another character string's content.
 char			*ft_substr(char const *s, unsigned int start, size_t len);
+//Function concatenates two character strings, creates a new char string.
+char			*ft_strjoin(char const *s1, char const *s2);
 
 #endif
