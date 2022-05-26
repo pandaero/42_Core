@@ -6,14 +6,14 @@
 /*   By: pandalaf <pandalaf@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 17:13:03 by pandalaf          #+#    #+#             */
-/*   Updated: 2022/05/26 16:53:25 by pandalaf         ###   ########.fr       */
+/*   Updated: 2022/05/26 20:45:00 by pandalaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
 Function creates a new character string from another character string's content.
-Returs pointer to the new string. Null if malloc fails.
-
+Returns pointer to the new string. Null if memory allocation fails.
+Allocates the memory, then fills it with the sub-string.
 */
 #include <stddef.h>
 #include <stdlib.h>
