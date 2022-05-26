@@ -6,12 +6,12 @@
 /*   By: pandalaf <pandalaf@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 17:13:03 by pandalaf          #+#    #+#             */
-/*   Updated: 2022/05/18 02:47:05 by pandalaf         ###   ########.fr       */
+/*   Updated: 2022/05/26 20:55:26 by pandalaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-Function looks for a character within a string pointer.
+Function looks for a character within a character string pointer.
 Returns pointer to location of character. If invalid, returns string pointer.
 Compares each character in string. Returns pointer first time it is the same.
 */

@@ -6,7 +6,7 @@
 /*   By: pandalaf <pandalaf@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/25 19:26:47 by pandalaf          #+#    #+#             */
-/*   Updated: 2022/05/26 17:09:24 by pandalaf         ###   ########.fr       */
+/*   Updated: 2022/05/26 20:56:27 by pandalaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,9 @@ int				ft_isalnum(int ch);
 int				ft_isascii(int ch);
 //Function determines whether input is a printing character.
 int				ft_isprint(int ch);
-//Function determines length of the string.
+//Function determines length of the character string.
 size_t			ft_strlen(const char *str);
-//Function looks for a character within a string pointer.
+//Function looks for a character within a character string pointer.
 char			*ft_strchr(const char *str, int ch);
 //Function looks for the last instance of a character within a string pointer.
 char			*ft_strrchr(const char *str, int ch);
@@ -64,5 +64,7 @@ char			*ft_strdup(const char *str);
 char			*ft_substr(char const *s, unsigned int start, size_t len);
 //Function concatenates two character strings, creates a new char string.
 char			*ft_strjoin(char const *s1, char const *s2);
+//Function creates a new char string with chars from the input removed.
+char			*ft_strtrim(char const *s1, char const *set);
 
 #endif
