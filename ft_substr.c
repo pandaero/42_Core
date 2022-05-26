@@ -6,7 +6,7 @@
 /*   By: pandalaf <pandalaf@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 17:13:03 by pandalaf          #+#    #+#             */
-/*   Updated: 2022/05/25 17:51:16 by pandalaf         ###   ########.fr       */
+/*   Updated: 2022/05/26 16:53:25 by pandalaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		ptr = (unsigned char *) malloc(len + 1);
 	if (!ptr)
 		return ((char *) 0);
-	if (start >= len)
+	if (start > len)
 	{
 		ptr[0] = '\0';
 		return ((char *) ptr);
@@ -53,8 +53,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 int	main(void)
 {
 	char			src[] = "Helloo";
-	unsigned int	start = 0;
-	unsigned int	len = 4;
+	unsigned int	start = 1;
+	unsigned int	len = 1;
 
 	printf("Test: str-%s, start-%d, n-%d, out-%s", src, start, len,
 			ft_substr(src, start, len));
