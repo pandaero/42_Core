@@ -12,8 +12,8 @@
 
 /*
 Function creates a new character string from another character string's content.
-Returns a pointer to the first letter of the found string. Null otherwise.
-Process
+Returs pointer to the new string. Null if malloc fails.
+
 */
 #include <stddef.h>
 #include <stdlib.h>
