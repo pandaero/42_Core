@@ -27,29 +27,37 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 	i = 0;
 	slen = ft_strlen(s);
-	if (len >= 0)
+	if (len > slen)
+		ptr = (unsigned char *) malloc(slen + 1);
+	else
+		ptr = (unsigned char *) malloc(len + 1);
+	if (!ptr)
+		return ((char *) 0);
+	if (start >= len)
 	{
-		if (len < slen)
-			ptr = malloc(len + 1);
-		else
-			ptr = malloc(slen);
-		if (!ptr)
-			return ((char *) 0);
-		while (len > i)
-		{
-			ptr[i] = s[start + i];
-			i++;
-		}
-		ptr[i] = '\0';
+		ptr[0] = '\0';
+		return ((char *) ptr);
 	}
-	return ((char *) 0);
+	while (len > i && slen > i)
+	{
+		ptr[i] = s[start + i];
+		i++;
+	}
+	ptr[i] = '\0';
+	return ((char *) ptr);
 }
 
-/* Test | gcc -Wall -Werror -Wextra ft_template.c && ./a.out
+/* Test | gcc -Wall -Werror -Wextra ft_substr.c ft_strlen.c && ./a.out
 #include <stdio.h>
 
 int	main(void)
 {
+	char			src[] = "Helloo";
+	unsigned int	start = 0;
+	unsigned int	len = 4;
+
+	printf("Test: str-%s, start-%d, n-%d, out-%s", src, start, len,
+			ft_substr(src, start, len));
 	return (0);
 }
 //*/
