@@ -92,3 +92,8 @@ Ranges are thus (-2ˆ(n-1)) - (2ˆ(n-1) - 1) where n is the bit-resolution.
 23/05/2022
 !ptr : (ptr == ((void *) 0));
 NULL : ((void *) 0);
+
+25/05/2022
+substr segmentation fault
+-- length was not protected (accessing pointer to length when not necessary)
+---- length was larger than needed allocation (no maximum conditions)
