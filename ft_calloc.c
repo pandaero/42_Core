@@ -22,12 +22,8 @@ For each object (determined by count), allocates and fills the req'd memory.
 void	*ft_calloc(size_t count, size_t size)
 {
 	unsigned char	*ptr;
-	unsigned int	i;
-	unsigned int	max;
 	unsigned int	alloc;
 
-	i = 0;
-	max = -1;
 	ptr = (unsigned char *) 0;
 	alloc = count * size;
 	if (size != (alloc / count) && count != 0)
