@@ -6,7 +6,7 @@
 /*   By: pandalaf <pandalaf@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/25 19:26:47 by pandalaf          #+#    #+#             */
-/*   Updated: 2022/05/26 20:56:27 by pandalaf         ###   ########.fr       */
+/*   Updated: 2022/06/03 11:18:40 by pandalaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,5 +66,7 @@ char			*ft_substr(char const *s, unsigned int start, size_t len);
 char			*ft_strjoin(char const *s1, char const *s2);
 //Function creates a new char string with chars from the input removed.
 char			*ft_strtrim(char const *s1, char const *set);
+//Function
+char			*ft_split(char const *s, char c);
 
 #endif
