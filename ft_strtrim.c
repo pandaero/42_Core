@@ -6,14 +6,14 @@
 /*   By: pandalaf <pandalaf@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 17:13:03 by pandalaf          #+#    #+#             */
-/*   Updated: 2022/06/03 10:42:18 by pandalaf         ###   ########.fr       */
+/*   Updated: 2022/06/03 10:43:54 by pandalaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
 Function creates a new char string with chars from the input removed.
 Returns a pointer to the new string (with the characters from the set removed).
-Allocates necessary memory, then checks each.
+Allocates necessary memory, then checks source string to trim characters from. 
 */
 #include <stdlib.h>
 #include "libft.h"
