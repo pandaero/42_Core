@@ -16,7 +16,7 @@ Several Outputs
 Several Methods
 */
 
-//Function looks for the first instance of a character and returns index.
+//Function finds first instance of a character within a string, returns index.
 static unsigned int	ft_strfichr(const char *str, int ch)
 {
 	unsigned int	i;
@@ -31,7 +31,7 @@ static unsigned int	ft_strfichr(const char *str, int ch)
 	return (0);
 }
 
-//Function looks for the last instance of a character and returns index.
+//Function finds last instance of a character within a string, returns index.
 static unsigned int	ft_strlichr(const char *str, int ch)
 {
 	unsigned int	i;
