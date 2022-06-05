@@ -11,10 +11,9 @@
 /* ************************************************************************** */
 
 /*
-Description of function
-Overview
-Output
-Process
+Function splits a char string into char strings between a delimiter char.
+Returns an array of char strings.
+Determines no. of split elements, size of elements, allocates mem, fills array.
 */
 #include "libft.h"
 #include <stdint.h>
@@ -54,7 +53,7 @@ static unsigned int	*ft_szwords(const char *str, unsigned int nwords, unsigned c
 	unsigned int	sz;
 	unsigned int	cnt;
 
-	ptr = malloc((size_t) nwords);
+	ptr = malloc(sizeof(unsigned int) * nwords);
 	if(!ptr)
 		return ((unsigned int *) 0);
 	i = 0;
@@ -87,7 +86,18 @@ static unsigned int	*ft_szwords(const char *str, unsigned int nwords, unsigned c
 
 char	**ft_split(char const *str, char delim)
 {
+	char			**out;
+	unsigned int	i;
+	unsigned int	j;
 
+	i = 0;
+	j = 0;
+	while (ft_nwords > i)
+	{
+		out[] = malloc();
+		i++;
+	}
+	return (out);
 }
 
 /* Test | gcc -Wall -Werror -Wextra ft_template.c && ./a.out
