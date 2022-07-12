@@ -17,6 +17,7 @@ Interprets sign. When digits, starts to sum values with base until the end.
 */
 #include "libft.h"
 
+//Function determines whether character is a spacing character.
 static int	ft_isspace(int ch)
 {
 	if (ch == ' ')
