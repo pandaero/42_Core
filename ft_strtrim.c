@@ -18,6 +18,7 @@ Allocates necessary memory, then checks source string to trim characters from.
 #include <stdlib.h>
 #include "libft.h"
 
+//Function allocates memory by counting required length of trimmed string
 static unsigned char	*ft_trimalloc(char const *s1, char const *set)
 {
 	unsigned char	*ptr;
@@ -46,6 +47,7 @@ static unsigned char	*ft_trimalloc(char const *s1, char const *set)
 	return (ptr);
 }
 
+//Function performs the writing step of the main loop in ft_strtrim
 static unsigned int	ft_writing(char *ptr1, const char *s1, unsigned int k)
 {
 	ft_memcpy(ptr1, s1, 1);
