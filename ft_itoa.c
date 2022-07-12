@@ -33,9 +33,18 @@ static unsigned int	ft_digs(int n)
 	return (digs);
 }
 
-//Function writes integer as character string to determined string.
-static char	*ft_revwrite(char *str, int n, unsigned int digs)
+char	*ft_itoa(int n)
 {
+	char			*str;
+	unsigned int	digs;
+
+	if (n > 0)
+		str = malloc((ft_digs(n) + 1) * sizeof(char));
+	else if (n < 0)
+		str = malloc((ft_digs(n) + 2) * sizeof(char));
+	if (!str)
+		return ((void *) 0);
+	digs = ft_digs(n);
 	if (n < 0)
 	{
 		str[0] = '-';
@@ -46,38 +55,31 @@ static char	*ft_revwrite(char *str, int n, unsigned int digs)
 	while (n > 0)
 	{
 		digs--;
-		str[digs] = n % 10;
+		str[digs] = n % 10 + '0';
 		n /= 10;
 	}
 	return (str);
 }
 
-char	*ft_itoa(int n)
-{
-	char			*str;
-
-	if (n > 0)
-		str = malloc((ft_digs(n) + 1) * sizeof(char *));
-	else if (n < 0)
-		str = malloc((ft_digs(n) + 2) * sizeof(char *));
-	ft_revwrite(str, n, ft_digs(n));
-	return (str);
-}
-
-//* Test | gcc -Wall -Werror -Wextra ft_itoa.c && ./a.out
+/* Test | gcc -Wall -Werror -Wextra ft_itoa.c && ./a.out
 #include <stdio.h>
 
 int	main(void)
 {
-	int	maxin = 172345345;
-	int	minin = -17582344;
+	int	maxin = 2147483647;
+	int	minin = -2147483647;
 	int	n = 1234;
 	int n2 = 3;
-
-	printf("Test\nIn:%i Out:%s\nIn:%i Out:%s\nIn:%i Out:%s\nIn:%i Out:%s\n",
-			maxin, ft_itoa(maxin), minin, ft_itoa(minin), n, ft_itoa(n),
-			n2, ft_itoa(n2));
-
+	char *str1;
+    char *str2;
+    char *str3;
+    
+    str1 = ft_itoa(maxin);
+    str2 = ft_itoa(minin);
+    str3 = ft_itoa(n);
+    printf("Test\nIn:%i Out:%s\nIn:%i Out:%s\nIn:%i Out:%s\nIn:%i Out:%s\n",
+            maxin, str1, minin, str2, n, str3,
+            n2, ft_itoa(n2));
 	return (0);
 }
 //*/
