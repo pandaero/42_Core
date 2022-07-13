@@ -16,7 +16,6 @@ Returns a string where each character has been the result of the function map.
 Checks for null strings, applies the function to each char of the input str.
 */
 #include <stdlib.h>
-#include "libft.h"
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
