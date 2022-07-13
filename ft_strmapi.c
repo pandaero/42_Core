@@ -42,7 +42,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	return ((void *) 0);
 }
 
-/* Test | gcc -Wall -Werror -Wextra ft_template.c && ./a.out
+/* Test | gcc -Wall -Werror -Wextra ft_strmapi.c && ./a.out
 #include <stdio.h>
 
 char	addx(unsigned int i, char c)
