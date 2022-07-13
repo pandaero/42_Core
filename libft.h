@@ -70,5 +70,6 @@ char			*ft_strtrim(char const *s1, char const *set);
 char			*ft_split(char const *s, char c);
 //Function writes an integer value to a character string.
 char			*ft_itoa(int n);
-
+//Function maps a function to an input character string.
+char			*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 #endif
