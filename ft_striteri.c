@@ -16,7 +16,6 @@ Returns nothing, modifies entered string.
 For non-empty pointers to char and function, applies function to char string.
 */
 
-
 void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
 	unsigned int	i;
