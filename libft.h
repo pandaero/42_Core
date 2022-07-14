@@ -72,4 +72,6 @@ char			*ft_split(char const *s, char c);
 char			*ft_itoa(int n);
 //Function maps a function to an input character string.
 char			*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+//Function applies another function to the entered string.
+void			ft_striteri(char *s, void (*f)(unsigned int, char *));
 #endif
