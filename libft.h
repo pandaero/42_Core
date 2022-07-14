@@ -78,4 +78,6 @@ void			ft_striteri(char *s, void (*f)(unsigned int, char *));
 void			ft_putchar_fd(char c, int fd);
 //Function writes a string to the input file descriptor.
 void			ft_putstr_fd(char *s, int fd);
+//Function writes a string to the input file descriptor and an end-of-line char.
+void			ft_putendl_fd(char *s, int fd);
 #endif
