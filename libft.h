@@ -76,4 +76,6 @@ char			*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void			ft_striteri(char *s, void (*f)(unsigned int, char *));
 //Function writes character to input file descriptor.
 void			ft_putchar_fd(char c, int fd);
+//Function writes a string to the input file descriptor.
+void			ft_putstr_fd(char *s, int fd);
 #endif
