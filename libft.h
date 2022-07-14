@@ -74,4 +74,6 @@ char			*ft_itoa(int n);
 char			*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 //Function applies another function to the entered string.
 void			ft_striteri(char *s, void (*f)(unsigned int, char *));
+//Function writes character to input file descriptor.
+void			ft_putchar_fd(char c, int fd);
 #endif
