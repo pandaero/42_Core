@@ -80,4 +80,6 @@ void			ft_putchar_fd(char c, int fd);
 void			ft_putstr_fd(char *s, int fd);
 //Function writes a string to the input file descriptor and an end-of-line char.
 void			ft_putendl_fd(char *s, int fd);
+//Function writes an integer as character to the input file descriptor.
+void			ft_putnbr_fd(int n, int fd);
 #endif
