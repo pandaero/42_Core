@@ -17,8 +17,8 @@ Function gets number of digits, takes into account sign, and loops modulus/div.
 */
 #include <stdlib.h>
 
-//Function counts number of digits contained in integer, excluding sign
-static unsigned int	ft_digs(int n)
+//Function counts number of digits contained in integer, excluding sign,
+static unsigned int	ft_digs(long int n)
 {
 	unsigned int	digs;
 
@@ -33,17 +33,11 @@ static unsigned int	ft_digs(int n)
 	return (digs);
 }
 
-char	*ft_itoa(int n)
+//Function runs through operation getting each digit of the number in reverse.
+void	ft_run(long int n, char *str)
 {
-	char			*str;
 	unsigned int	digs;
 
-	if (n > 0)
-		str = malloc((ft_digs(n) + 1) * sizeof(char));
-	else if (n < 0)
-		str = malloc((ft_digs(n) + 2) * sizeof(char));
-	if (!str)
-		return ((void *) 0);
 	digs = ft_digs(n);
 	if (n < 0)
 	{
@@ -58,6 +52,26 @@ char	*ft_itoa(int n)
 		str[digs] = n % 10 + '0';
 		n /= 10;
 	}
+}
+
+char	*ft_itoa(int n)
+{
+	char			*str;
+
+	if (n > 0)
+		str = malloc((ft_digs(n) + 1) * sizeof(char));
+	else if (n < 0)
+		str = malloc((ft_digs(n) + 2) * sizeof(char));
+	else if (n == 0)
+	{
+		str = malloc(2 * sizeof(char));
+		str[0] = '0';
+		str[1] = '\0';
+		return (str);
+	}
+	if (!str || n > 2147483647)
+		return ((void *) 0);
+	ft_run(n, str);
 	return (str);
 }
 
@@ -69,7 +83,7 @@ int	main(void)
 	int	maxin = 2147483647;
 	int	minin = -2147483647;
 	int	n = 1234;
-	int n2 = 3;
+	int n2 = 0;
 	char *str1;
     char *str2;
     char *str3;
