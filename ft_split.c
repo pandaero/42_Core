@@ -16,11 +16,10 @@ Returns an array of char strings.
 Determines no. of split elements, size of elements, allocates mem, fills array.
 */
 #include "libft.h"
-#include <stdint.h>
 #include <stdlib.h>
 
-//Function finds number of "words" in string between a set delimiter character.
-static unsigned int	ft_nwords(const char *str, unsigned char ch)
+//Function determines non-delimiter characters present in string.
+static unsigned int	ft_chars(const char *str, char delim)
 {
 	unsigned int	i;
 	unsigned int	cnt;
@@ -29,35 +28,20 @@ static unsigned int	ft_nwords(const char *str, unsigned char ch)
 	cnt = 0;
 	while (str[i] != '\0')
 	{
-		if (str[i] == ch)
-		{
-			if (str[i + 1] != ch && str[i + 1 != '\0'])
-				cnt++;
-			i++;
-		}
-		else
-		{
-			if (cnt == 0)
-				cnt++;
-			i++;
-		}
+		if (str[i] != delim)
+			cnt++;
+		i++;
 	}
 	return (cnt);
 }
 
-//Function determines the sizes of "words" in string between set delimiter char.
-static unsigned int	*ft_wordlen(const char *str, unsigned char ch)
+//Function finds number of "words" in string between a set delimiter character.
+static unsigned int	ft_nwrds(const char *str, unsigned char ch)
 {
-	unsigned int	*ptr;
 	unsigned int	i;
-	unsigned int	sz;
 	unsigned int	cnt;
 
-	ptr = calloc(ft_nwords(str, ch), sizeof(unsigned int));
-	if(!ptr)
-		return ((unsigned int *) 0);
 	i = 0;
-	sz = 0;
 	cnt = 0;
 	while (str[i] != '\0')
 	{
@@ -71,30 +55,60 @@ static unsigned int	*ft_wordlen(const char *str, unsigned char ch)
 		{
 			if (cnt == 0)
 				cnt++;
-			sz++;
-			if (str[i + 1] == ch && str[i + 1] != '\0')
-			{
-				cnt++;
-				ptr[cnt] = sz;
-				sz = 0;
-			}
 			i++;
-		} 
-	}	
-	return (ptr);
+		}
+	}
+	return (cnt);
 }
 
-char	**ft_split(char const *str, char delim)
+//Function returns the starting position index of a word.
+static unsigned int	startpos(const char *str, char del, unsigned int pos)
+{
+	if (str[pos] != del)
+		return (pos);
+	while(str[pos] == del)
+		pos++;
+	if(str[pos] != del)
+		return (pos);
+	else
+		return (0);
+}
+
+//Function determines the length of a word, given its starting position index.
+static unsigned int	length(const char *str, char del, unsigned int pos)
+{
+	unsigned int	ret;
+
+	ret = 0;
+	while (str[pos] != '\0' && str[pos] != del)
+	{
+		pos++;
+		ret++;
+	}
+	return (ret);	
+}
+
+char	**ft_split(char const *s, char c)
 {
 	char			**out;
 	unsigned int	i;
-	unsigned int	j;
+	unsigned int	start;
+	unsigned int	len;
 
+	out = (char **)malloc((ft_chars(s, c) + ft_nwrds(s, c) + 1) * sizeof(char));
+	if (!out)
+		return((void *) 0);
 	i = 0;
-	j = 0;
-	out = ft_calloc(ft_nwords(str, delim) + ft_wordlen(str, delim));
-
-
+	start = 0;
+	len = 0;
+	while (i < ft_nwrds(s, c))
+	{
+		start = startpos(s, c, start + len);
+		len = length(s, c, start);
+		out[i] = ft_substr((char *)s, start, len);
+		i++;
+	}
+	out[i] = (char *) 0;
 	return (out);
 }
 
@@ -106,10 +120,8 @@ int	main(void)
 {
 	char			str[] = ";;o;he;;hello";
 	char			str2[] = "he;eo;";
-	unsigned int	arr[2];
 
-	arr[0] = ft_words(str, ';');
-	arr[1] = ft_words(str2, ';');
+
 
 	printf("Result1: %d, Result2 : %d", arr[0], arr[1]);
 	return (0);
