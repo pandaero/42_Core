@@ -67,7 +67,7 @@ char			*ft_strjoin(char const *s1, char const *s2);
 //Function creates a new char string with chars from the input removed.
 char			*ft_strtrim(char const *s1, char const *set);
 //Function splits a char string into char strings between delimeter chars.
-char			*ft_split(char const *s, char c);
+char			**ft_split(char const *s, char c);
 //Function writes an integer value to a character string.
 char			*ft_itoa(int n);
 //Function maps a function to an input character string.
