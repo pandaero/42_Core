@@ -18,23 +18,6 @@ Determines no. of split elements, size of elements, allocates mem, fills array.
 #include "libft.h"
 #include <stdlib.h>
 
-//Function determines non-delimiter characters present in string.
-static unsigned int	ft_chars(const char *str, char delim)
-{
-	unsigned int	i;
-	unsigned int	cnt;
-
-	i = 0;
-	cnt = 0;
-	while (str[i] != '\0')
-	{
-		if (str[i] != delim)
-			cnt++;
-		i++;
-	}
-	return (cnt);
-}
-
 //Function finds number of "words" in string between a set delimiter character.
 static unsigned int	ft_nwrds(const char *str, unsigned char ch)
 {
@@ -95,7 +78,7 @@ char	**ft_split(char const *s, char c)
 	unsigned int	start;
 	unsigned int	len;
 
-	out = (char **)malloc((ft_chars(s, c) + ft_nwrds(s, c) + 1) * sizeof(char *));
+	out = (char **)malloc((ft_nwrds(s, c) + 1) * sizeof(char *));
 	if (!out)
 		return((void *) 0);
 	i = 0;
@@ -112,7 +95,7 @@ char	**ft_split(char const *s, char c)
 	return (out);
 }
 
-//* Test
+/* Test
 //gcc -Wall -Werror -Wextra ft_split.c ft_substr.c ft_strlen.c && ./a.out
 #include <stdio.h>
 
