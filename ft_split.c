@@ -95,7 +95,7 @@ char	**ft_split(char const *s, char c)
 	unsigned int	start;
 	unsigned int	len;
 
-	out = (char **)malloc((ft_chars(s, c) + ft_nwrds(s, c) + 1) * sizeof(char));
+	out = (char **)malloc((ft_chars(s, c) + ft_nwrds(s, c) + 1) * sizeof(char *));
 	if (!out)
 		return((void *) 0);
 	i = 0;
@@ -112,18 +112,17 @@ char	**ft_split(char const *s, char c)
 	return (out);
 }
 
-/* Test
-//gcc -Wall -Werror -Wextra ft_split.c ft_substr.c ft_calloc.c ft_strlen.c
+//* Test
+//gcc -Wall -Werror -Wextra ft_split.c ft_substr.c ft_strlen.c && ./a.out
 #include <stdio.h>
 
 int	main(void)
 {
-	char			str[] = ";;o;he;;hello";
-	char			str2[] = "he;eo;";
+	char	str[] = ";;o;he;;hello";
 
-
-
-	printf("Result1: %d, Result2 : %d", arr[0], arr[1]);
+	char	**arr = ft_split(str, ';');
+	printf("Result1:%s, Result2:%s, Result3:%s, Result4:%s\n",
+			arr[0], arr[1], arr[2], arr[3]);
 	return (0);
 }
 //*/
