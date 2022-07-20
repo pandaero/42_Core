@@ -49,9 +49,9 @@ static unsigned int	startpos(const char *str, char del, unsigned int pos)
 {
 	if (str[pos] != del)
 		return (pos);
-	while(str[pos] == del)
+	while (str[pos] == del)
 		pos++;
-	if(str[pos] != del)
+	if (str[pos] != del)
 		return (pos);
 	else
 		return (0);
@@ -68,7 +68,7 @@ static unsigned int	length(const char *str, char del, unsigned int pos)
 		pos++;
 		ret++;
 	}
-	return (ret);	
+	return (ret);
 }
 
 char	**ft_split(char const *s, char c)
@@ -80,7 +80,7 @@ char	**ft_split(char const *s, char c)
 
 	out = (char **)malloc((ft_nwrds(s, c) + 1) * sizeof(char *));
 	if (!out)
-		return((void *) 0);
+		return ((void *) 0);
 	i = 0;
 	start = 0;
 	len = 0;
