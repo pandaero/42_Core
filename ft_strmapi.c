@@ -29,7 +29,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 			i++;
 		out = malloc((i + 1) * sizeof(char));
 		if (!out)
-			return((void *) 0);
+			return ((void *) 0);
 		i = 0;
 		while (s[i] != '\0')
 		{
