@@ -116,3 +116,6 @@ More https://www.geeksforgeeks.org/input-output-system-calls-c-create-open-close
 16/07/2022
 ft_itoa
 n = -n : couldn't be handled with normal int as the -ve is asymetrical, you lose one digit of value, use long instead.
+
+20/07/2022
+norminette works with: export PATH="$HOME/.local/bin:$PATH"
