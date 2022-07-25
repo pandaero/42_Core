@@ -24,15 +24,16 @@ char	*ft_strdup(const char *str)
 	unsigned int	size;
 
 	size = ft_strlen(str);
-	dst = malloc(size);
+	dst = malloc((1 + size) * (sizeof(char)));
+	if (!dst)
+		return ((char *) 0);
 	if (str[0] == '\0')
 	{
 		dst[0] = '\0';
 		return ((char *) dst);
 	}
-	if (!dst)
-		return ((char *) 0);
-	dst = ft_memcpy(dst, str, size);
+
+	dst = ft_memcpy(dst, str, size + 1);
 	return ((char *) dst);
 }
 
