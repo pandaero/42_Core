@@ -32,7 +32,6 @@ char	*ft_strdup(const char *str)
 		dst[0] = '\0';
 		return ((char *) dst);
 	}
-
 	dst = ft_memcpy(dst, str, size + 1);
 	return ((char *) dst);
 }
