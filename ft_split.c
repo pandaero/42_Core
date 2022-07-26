@@ -13,7 +13,7 @@
 /*
 Function splits a char string into char strings between a delimiter char.
 Returns an array of char strings.
-Determines no. of split elements, size of elements, allocates mem, fills array.
+Determines no. of split elements, allocs mem, fills array using start and len.
 */
 #include "libft.h"
 #include <stdlib.h>
