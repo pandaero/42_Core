@@ -22,22 +22,27 @@ Allocates the memory, then fills it with the sub-string.
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	unsigned char	*ptr;
-	unsigned int	slen;
 	unsigned int	i;
+	size_t			slen;
 
-	i = 0;
-	slen = ft_strlen(s);
-	if (len > slen)
-		ptr = (unsigned char *) malloc(slen + 1);
-	else
-		ptr = (unsigned char *) malloc(len + 1);
-	if (!ptr)
+	if (!s)
 		return ((char *) 0);
-	if (start > len)
+	slen = ft_strlen(s);
+	if (start > slen)
 	{
+		ptr = malloc(sizeof(char));
+		if (!ptr)
+			return ((char *) 0);
 		ptr[0] = '\0';
 		return ((char *) ptr);
 	}
+	if (len < slen)
+		ptr = malloc((len + 1) * (sizeof(char)));
+	if (len + start > slen)
+		ptr = malloc((slen - start + 1) * (sizeof(char)));
+	if (!ptr)
+		return ((char *) 0);
+	i = 0;
 	while (len > i && slen > i)
 	{
 		ptr[i] = s[start + i];
@@ -52,9 +57,9 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 int	main(void)
 {
-	char			src[] = "Helloo";
-	unsigned int	start = 1;
-	unsigned int	len = 1;
+	char			src[] = "0123456789";
+	unsigned int	start = 9;
+	unsigned int	len = 10;
 
 	printf("Test: str-%s, start-%d, n-%d, out-%s", src, start, len,
 			ft_substr(src, start, len));
