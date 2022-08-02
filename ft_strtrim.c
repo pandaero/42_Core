@@ -40,7 +40,7 @@ static unsigned char	*ft_trimalloc(char const *s1, char const *set)
 		j = 0;
 		i++;
 	}
-	reqlen = i - reqlen;
+	reqlen = i - reqlen + 1;
 	ptr = malloc(reqlen);
 	if (!ptr)
 		return ((unsigned char *) 0);
