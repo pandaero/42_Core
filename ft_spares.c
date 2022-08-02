@@ -26,6 +26,22 @@ static int	ft_isspace(int ch)
 	return (0);
 }
 
+//Function determines non-delimiter characters present in string.
+static unsigned int	ft_chars(const char *str, char delim)
+{
+	unsigned int	i;
+	unsigned int	cnt;
+
+	i = 0;
+	cnt = 0;
+	while (str[i] != '\0')
+	{
+		if (str[i] != delim)
+			cnt++;
+		i++;
+	}
+	return (cnt);
+}
 
 //Function finds first instance of a character within a string, returns index.
 static unsigned int	ft_strfichr(const char *str, int ch)

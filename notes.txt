@@ -119,3 +119,13 @@ n = -n : couldn't be handled with normal int as the -ve is asymetrical, you lose
 
 20/07/2022
 norminette works with: export PATH="$HOME/.local/bin:$PATH"
+
+25/07/2022
+substr - special cases:
+- start > slen
+-- means substr outside of string 
+---> return null char
+- len >> slen
+-- allocating way too much memory, must end at end of string
+- len + start > slen
+-- substr in the range longer than string
