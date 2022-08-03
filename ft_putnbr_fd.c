@@ -11,16 +11,28 @@
 /* ************************************************************************** */
 
 /*
-Function writes a string to the input file descriptor and an end-of-line char.
-No return value, writes string and ending to file descriptor.
-Calls write function in a loop until the end of the string is reached, then EOL.
+Function writes a number as a string to the input file descriptor.
+No return value, writes number as character string to file descriptor.
+Uses recursion to run through the number.
 */
 #include <unistd.h>
 #include "libft.h"
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	ft_putstr_fd(ft_itoa(n), fd);
+	if (n == -2147483648)
+	{
+		ft_putstr_fd("-2147483648", fd);
+		return ;
+	}
+	if (n < 0)
+	{
+		n = -n;
+		ft_putchar_fd('-', fd);
+	}
+	if (n / 10)
+		ft_putnbr_fd(n / 10, fd);
+	ft_putchar_fd((n % 10) + '0', fd);
 }
 
 /* Test
