@@ -32,14 +32,14 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		ptr[0] = '\0';
 		return ((char *) ptr);
 	}
-	if (len <= ft_strlen(s))
-		ptr = malloc((len + 1) * (sizeof(char)));
-	if (len + start > ft_strlen(s))
+	else if (len + start >= ft_strlen(s))
 		ptr = malloc((ft_strlen(s) - start + 1) * (sizeof(char)));
+	else
+		ptr = malloc((len + 1) * (sizeof(char)));
 	if (!ptr)
 		return ((char *) 0);
 	i = 0;
-	while (len > i && ft_strlen(s) > i)
+	while (len > i && s[start + i] != '\0')
 	{
 		ptr[i] = s[start + i];
 		i++;
@@ -54,8 +54,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 int	main(void)
 {
 	char			src[] = "0123456789";
-	unsigned int	start = 9;
-	unsigned int	len = 10;
+	unsigned int	start = 5;
+	unsigned int	len = 100;
 
 	printf("Test: str-%s, start-%d, n-%d, out-%s", src, start, len,
 			ft_substr(src, start, len));
