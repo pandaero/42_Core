@@ -58,6 +58,8 @@ char	*ft_itoa(int n)
 {
 	char			*str;
 
+	if (!(n <= 2147483647 || n >= -2147483647))
+		return ((char *) 0);
 	if (n > 0)
 		str = malloc((ft_digs(n) + 1) * sizeof(char));
 	else if (n < 0)
@@ -69,8 +71,8 @@ char	*ft_itoa(int n)
 		str[1] = '\0';
 		return (str);
 	}
-	if (!str || n > 2147483647)
-		return ((void *) 0);
+	if (!str)
+		return ((char *) 0);
 	ft_run(n, str);
 	return (str);
 }
