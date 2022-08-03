@@ -101,11 +101,12 @@ char	**ft_split(char const *s, char c)
 
 int	main(void)
 {
-	char	str[] = ";;o;he;;hello";
+	//char	str[] = ";;o;he;;hello";
+	char	str[] = "tripouille";
 
-	char	**arr = ft_split(str, ';');
+	char	**arr = ft_split(str, 0);
 	printf("Result1:%s, Result2:%s, Result3:%s, Result4:%s\n",
-			arr[0], arr[1], arr[2], arr[3]);
+			arr[0], arr[1], "0", "0"); //arr[2], arr[3]);
 	return (0);
 }
 //*/
