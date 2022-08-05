@@ -40,7 +40,7 @@ char	*ft_strnstr(const char *sch, const char *trm, size_t srl)
 				break ;
 			}
 			j = 0;
-		i++;
+			i++;
 		}
 	}
 	return (ptr);
