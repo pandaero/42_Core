@@ -64,9 +64,11 @@ char	*ft_itoa(int n)
 		str = malloc((ft_digs(n) + 1) * sizeof(char));
 	else if (n < 0)
 		str = malloc((ft_digs(n) + 2) * sizeof(char));
-	else if (n == 0)
+	else
 	{
 		str = malloc(2 * sizeof(char));
+		if (!str)
+			return ((char *) 0);
 		str[0] = '0';
 		str[1] = '\0';
 		return (str);
