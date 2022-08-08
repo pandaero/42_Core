@@ -35,11 +35,10 @@ t_list	*ft_lstnew(void *content)
 
 int	main(void)
 {
-	char	ch = 'h';
 	void	*ptrlist;
 	
-	ptrlist = ft_lstnew(ch);
-	printf("Input Content: %c, List Content: ", ch);
+	ptrlist = ft_lstnew((void *) 'h');
+	printf("Input Content: %c, List Content: ", 'h');
 	printf("%c", *(char *) ptrlist);
 	printf("\n");
 	return (0);
