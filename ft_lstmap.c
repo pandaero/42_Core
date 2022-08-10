@@ -19,25 +19,26 @@ Create a new node with the function applied to each content. Keep adding nodes.
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-		t_list	*new;
-	t_list	*tmp;
+	t_list		*ptrlist_new;
+	t_list		*ptrlist_node;
+	t_list		*ptrlist_placeholder;
 
-	if (!lst || !f || !del)
-		return (NULL);
-	tmp = NULL;
-	new = ft_lstnew((*f)(lst->content));
-	lst = lst -> next;
-	while (lst)
+	ptrlist_new = ft_lstnew((*f)(lst->content));
+	if (!ptrlist_new)
+		return ((void *) 0);
+	ptrlist_placeholder = ptrlist_new;
+	while (lst->next != (void *) 0)
 	{
-		tmp = ft_lstnew((*f)(lst->content));
-		if (!tmp)
-			ft_lstclear(&new, del);
-		ft_lstadd_back(&new, tmp);
-		if (lst->next == NULL)
-			break ;
 		lst = lst->next;
+		ptrlist_node = ft_lstnew((*f)(lst->content));
+		if (!ptrlist_node)
+		{
+			ft_lstclear(&ptrlist_placeholder, del);
+			return ((void *) 0);
+		}
+		ft_lstadd_back(ptrlist_new, ptrlist_node);
 	}
-	return (new);
+	return (ptrlist_new);
 }
 
 /* Test | gcc -Wall -Werror -Wextra ft_template.c && ./a.out
