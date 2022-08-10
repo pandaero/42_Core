@@ -13,7 +13,7 @@
 /*
 Function deletes a node from a linked list.
 Returns nothing. Deletes a node from a linked list.
-Makes delete function act on the node's content, then free's allocated pointer.
+Makes delete function act on the node's content, then free's ex-allocated space.
 */
 #include "libft.h"
 #include <stdlib.h>
