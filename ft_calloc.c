@@ -17,6 +17,7 @@ For each object (determined by count), allocates and fills the req'd memory.
 */
 #include <stddef.h>
 #include <stdlib.h>
+#include <stdint.h>
 #include "libft.h"
 
 void	*ft_calloc(size_t count, size_t size)
@@ -24,19 +25,18 @@ void	*ft_calloc(size_t count, size_t size)
 	unsigned char	*ptr;
 	unsigned int	alloc;
 
-	ptr = (unsigned char *) 0;
 	alloc = count * size;
-	if (size != (alloc / count) && count != 0)
-		return ((void *) ptr);
+	if (count >= SIZE_MAX || size >= SIZE_MAX)
+		return ((void *) 0);
 	ptr = malloc(alloc);
 	if (!ptr)
-		return ((void *) ptr);
+		return ((void *) 0);
 	ft_bzero(ptr, alloc);
 	return ((void *) ptr);
 }
 
 /* Test
-//gcc -Wall -Werror -Wextra ft_calloc.c ft_bzero.c ft_memset.c && ./a.out|cat -e
+//gcc -Wall -Werror -Wextra ft_calloc.c ft_bzero.c && ./a.out|cat -e
 #include <stdio.h>
 
 int	main(void)
@@ -49,7 +49,7 @@ int	main(void)
 	long long unsigned int	alloc;
 
 	max = -1;
-	count = 3;
+	count = max;
 	size = 15;
 	i = 0;
 	alloc = count * size;
