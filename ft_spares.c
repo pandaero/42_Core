@@ -143,6 +143,72 @@ static unsigned int	*ft_szwords(const char *str, unsigned int nwords, unsigned c
 	return (ptr);
 }
 
+//Function allocates memory by counting required length of trimmed string
+static unsigned char	*ft_trimalloc(char const *s1, char const *set)
+{
+	unsigned char	*ptr;
+	unsigned int	reqlen;
+	unsigned int	i;
+	unsigned int	j;
+
+	i = 0;
+	j = 0;
+	reqlen = 0;
+	while (s1[i] != '\0')
+	{
+		while (set[j] != '\0')
+		{
+			if (s1[i] == set[j])
+				reqlen++;
+			j++;
+		}
+		j = 0;
+		i++;
+	}
+	reqlen = i - reqlen + 1;
+	ptr = malloc(reqlen);
+	if (!ptr)
+		return ((unsigned char *) 0);
+	return (ptr);
+}
+
+//Function performs the writing step of the main loop in ft_strtrim
+static unsigned int	ft_writing(char *ptr1, const char *s1, unsigned int k)
+{
+	ft_memcpy(ptr1, s1, 1);
+	k++;
+	return (k);
+}
+
+//Function trims all characters from the set from the string.
+static char	*ft_strtrim(char const *s1, char const *set)
+{
+	unsigned char	*ptr;
+	unsigned int	ii[3];
+
+	ptr = ft_trimalloc(s1, set);
+	if (!ptr)
+		return ((char *) 0);
+	ii[0] = 0;
+	ii[1] = 0;
+	ii[2] = 0;
+	if (set[ii[1]] == '\0')
+		return ((char *) ft_memcpy(ptr, s1, ft_strlen(s1) + 1));
+	while (s1[ii[0]] != '\0')
+	{
+		while (s1[ii[0]] != set[ii[1]] && set[ii[1]] != '\0')
+		{
+			if (set[ii[1] + 1] == '\0')
+				ii[2] = ft_writing((char *) &ptr[ii[2]],
+						&s1[ii[0]], ii[2]);
+			ii[1]++;
+		}
+		ii[1] = 0;
+		ii[0]++;
+	}
+	ptr[ii[2]] = '\0';
+	return ((char *) ptr);
+}
 
 /* Test | gcc -Wall -Werror -Wextra ft_template.c && ./a.out
 #include <stdio.h>
