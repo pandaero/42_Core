@@ -43,7 +43,7 @@ char	*ft_strrchr(const char *str, int ch);
 //Function compares two strings, gives difference when not equal.
 int		ft_strncmp(const char *str1, const char *str2, size_t n);
 //Function writes a value to a determined length of bytes to a memory location.
-void	ft_memset(void *byte, int ch, size_t len);
+void	*ft_memset(void *byte, int ch, size_t n);
 //Function sets determined length of memory in a memory location to zero.
 void	ft_bzero(void *str, size_t len);
 //Function locates the first instance of a character within n bytes of a string.
@@ -57,7 +57,7 @@ void	*ft_memmove(void *dst, const void *src, size_t n);
 //Function writes to n bytes of a char string from a source to a destination.
 size_t	ft_strlcpy(char *dst, const char *src, size_t sizedst);
 //Function appends n bytes of a source character string to a destination string.
-size_t	ft_strlcat(char *dst, const char *src, size_t sizedst);
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
 //Function locates string within n in another string. Returns ptr to location.
 char	*ft_strnstr(const char *srch, const char *term, size_t srlen);
 //Function interprets a character string to return an integer type.
@@ -73,7 +73,7 @@ char	*ft_strjoin(char const *s1, char const *s2);
 //Function creates a new char string with chars from the input removed.
 char	*ft_strtrim(char const *s1, char const *set);
 //Function splits a char string into char strings between delimeter chars.
-char	**ft_split(char const *s, char c);
+char	**ft_split(char const *str, char ch);
 //Function writes an integer value to a character string.
 char	*ft_itoa(int n);
 //Function maps a function to an input character string.
