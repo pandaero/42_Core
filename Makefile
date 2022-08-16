@@ -34,7 +34,7 @@ $(NAME): $(OBJS)
 	ar rcs $@ $^
 
 bonus: $(OBJS) $(BOBJS)
-	ar rcs $@ $^	
+	ar rcs $(NAME) $^	
 
 .PHONY: all clean fclean re bonus
 
