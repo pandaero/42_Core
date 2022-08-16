@@ -17,19 +17,19 @@ Turns the value to unsigned char, then writes it to each location within length.
 */
 #include <stddef.h>
 
-void	*ft_memset(void *str, int ch, size_t n)
+void	*ft_memset(void *byte, int ch, size_t n)
 {
 	size_t			i;
 	unsigned char	*mptr;
 
-	mptr = (unsigned char *) str;
+	mptr = (unsigned char *) byte;
 	i = 0;
 	while (n > i)
 	{
 		mptr[i] = ch;
 		i++;
 	}
-	return (str);
+	return (byte);
 }
 
 /* Test | gcc -Wall -Werror -Wextra ft_memset.c && ./a.out
