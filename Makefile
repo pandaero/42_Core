@@ -36,8 +36,6 @@ $(NAME): $(OBJS)
 bonus: $(OBJS) $(BOBJS)
 	ar rcs $(NAME) $^	
 
-.PHONY: all clean fclean re bonus
-
 clean:
 	rm -fr $(OBJ_DIR)
 
@@ -51,3 +49,5 @@ $(addprefix $(OBJ_DIR), %.o): %.c | $(OBJ_DIR)
 
 $(OBJ_DIR):
 	mkdir -p $(OBJ_DIR)
+
+.PHONY: all clean fclean re bonus
