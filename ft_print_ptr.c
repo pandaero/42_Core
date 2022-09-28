@@ -6,11 +6,11 @@
 /*   By: pandalaf <pandalaf@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 12:20:45 by pandalaf          #+#    #+#             */
-/*   Updated: 2022/09/25 14:16:50 by pandalaf         ###   ########.fr       */
+/*   Updated: 2022/09/28 20:35:00 by pandalaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
 //Function converts a hexadecimal value to base 16 character. Case is toggled.
 static int	hex_digit_printer(int num, int cas)

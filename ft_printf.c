@@ -6,14 +6,14 @@
 /*   By: pandalaf <pandalaf@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 13:13:51 by pandalaf          #+#    #+#             */
-/*   Updated: 2022/09/26 07:16:22 by pandalaf         ###   ########.fr       */
+/*   Updated: 2022/09/28 20:35:22 by pandalaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdarg.h>
 #include <unistd.h>
 #include <stdlib.h>
-#include "ft_printf.h"
+#include "libft.h"
 
 //Function calls format printers for writing to standard output by type.
 static int	converter(va_list args, char type)

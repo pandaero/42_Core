@@ -6,12 +6,12 @@
 /*   By: pandalaf <pandalaf@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 12:27:07 by pandalaf          #+#    #+#             */
-/*   Updated: 2022/09/25 12:39:08 by pandalaf         ###   ########.fr       */
+/*   Updated: 2022/09/28 20:35:08 by pandalaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include "ft_printf.h"
+#include "libft.h"
 
 //Function prints a char string to standard output, unformatted.
 int	ft_print_str(const char *str)

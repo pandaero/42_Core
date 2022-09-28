@@ -6,11 +6,11 @@
 /*   By: pandalaf <pandalaf@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 11:30:49 by pandalaf          #+#    #+#             */
-/*   Updated: 2022/09/25 12:42:54 by pandalaf         ###   ########.fr       */
+/*   Updated: 2022/09/28 20:34:42 by pandalaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
 //Function prints a hexadecimal prefix to the standard output.
 int	hex_prefix_printer(int cas)
