@@ -106,4 +106,26 @@ void	ft_lstclear(t_list **lst, void (*del)(void *));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 //Function maps a function to every node's content in a linked list.
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+//Function prints out a formatted string based on inputs. Returns written chars.
+int		ft_printf(const char *format, ...);
+//Function prints out a character to the standard output. Returns written count.
+int		ft_print_char(char ch);
+//Function prints an integer to standard output, unformatted. Returns written.
+int		ft_print_int(int num);
+//Function prints an unsigned integer to standard output, unformatted.
+int		ft_print_unsigned(unsigned int num);
+//Function prints out a hexadecimal number to the standard output. Case option.
+int		ft_print_hex(unsigned int num, int cas);
+//Function prints out a hexadecimal number to the standard output. Case option.
+int		ft_print_hex_long(unsigned long long num, int cas);
+//Function prints an pointer address to standard output, unformatted.
+int		ft_print_ptr(void *ptr);
+//Function prints a char string to standard output, unformatted.
+int		ft_print_str(const char *str);
+//Function prints a hexadecimal prefix to the standard output.
+int		hex_prefix_printer(int cas);
+//Function identifies the format types. Returns 1 or 0.
+int		type_checker(char ch);
+//Function reads a type specifier after a determined starting location.
+char	type_reader(const char *string, int start);
 #endif
