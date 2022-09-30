@@ -12,6 +12,8 @@
 
 #ifndef LIBFT_H
 # define LIBFT_H
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 4
 # include <stddef.h>
 
 typedef struct s_list
@@ -126,6 +128,18 @@ int		ft_print_str(const char *str);
 int		hex_prefix_printer(int cas);
 //Function identifies the format types. Returns 1 or 0.
 int		type_checker(char ch);
+//Function that outputs lines from a given file descriptor.
+char	*get_next_line(int fd);
 //Function reads a type specifier after a determined starting location.
 char	type_reader(const char *string, int start);
+//Function searches for char and returns first location. 0 not found. 1 is 1st.
+int		ft_strsrch(char *str, int ch);
+//Function joins two character strings, creates a new char string. Mod: Free s1.
+char	*ft_strjoinmod(char *s1, char *s2);
+//Function joins the initial string with reads from a descriptor until newline.
+char	*joining(int fd, char *initial);
+//Function trims the input string such that contents after newline are cut.
+char	*output(char *candidate);
+//Function takes input string and returns contents after the first newline.
+char	*remaining(char *candidate);
 #endif
