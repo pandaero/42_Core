@@ -14,6 +14,7 @@
 # define LIBFT_H
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 4
+# endif
 # include <stddef.h>
 
 typedef struct s_list
