@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_ptr.c                                     :+:      :+:    :+:   */
+/*   ft_print_ptr_linux.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pandalaf <pandalaf@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 12:20:45 by pandalaf          #+#    #+#             */
-/*   Updated: 2022/09/28 20:35:00 by pandalaf         ###   ########.fr       */
+/*   Updated: 2022/10/09 14:04:51 by pandalaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,7 +87,7 @@ int	ft_print_ptr(void *ptr)
 	count = 0;
 	if (!ptr)
 	{
-		count = ft_print_str(ptr);
+		count = ft_print_str("(nil)");
 		return (count);
 	}
 	count += hex_prefix_printer(1);
