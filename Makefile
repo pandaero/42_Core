@@ -33,7 +33,7 @@ BSRCS := ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c\
 			ft_lstmap.c 
 # Object files to create (in directory)
 OBJ_DIR := obj/
-OBJS = $(addprefix $(OBJ_DIR), $(SRCS:.c=.o))
+OBJS = $(addprefix $(OBJ_DIR), $(SRCS:.c=.o)) obj/ft_print_ptr.o
 BOBJS = $(addprefix $(OBJ_DIR), $(BSRCS:.c=.o))
 
 # Operating system differences, special sources
@@ -59,7 +59,7 @@ $(addprefix $(OBJ_DIR), %.o): %.c | $(OBJ_DIR)
 	$(CC) -c $(CFLAGS) $^ -o $@
 
 # Make specific object file
-ft_print_ptr.o: $(SSRCS)
+obj/ft_print_ptr.o: $(SSRCS)
 	$(CC) -c $(CFLAGS) $^ -o $@
 
 # Make the object directory
