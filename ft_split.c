@@ -19,7 +19,7 @@ Determines no. of split elements, allocs mem, fills array using start and len.
 #include <stdlib.h>
 
 //Function finds number of "words" in string between a set delimiter character.
-static unsigned int	ft_nwrds(const char *str, unsigned char ch)
+unsigned int	ft_nwrds(const char *str, unsigned char ch)
 {
 	unsigned int	i;
 	unsigned int	cnt;
