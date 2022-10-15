@@ -24,7 +24,7 @@ SRCS :=	ft_isalpha.c ft_toupper.c ft_isdigit.c ft_tolower.c ft_isalnum.c \
 		ft_strtrim.c ft_split.c ft_itoa.c ft_strmapi.c ft_striteri.c \
 		ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c \
 		ft_printf.c ft_print_char.c ft_print_hex.c ft_print_int.c \
-		ft_print_str.c ft_print_unsigned.c type_reader.c \
+		ft_print_str.c ft_print_unsigned.c ft_print_ptr.c type_reader.c \
 		get_next_line.c get_next_line_utils.c
 # Source files to include in the bonus
 BSRCS := ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c \
@@ -35,12 +35,10 @@ OBJ_DIR := obj/
 OBJS = $(addprefix $(OBJ_DIR), $(SRCS:.c=.o)) obj/ft_print_ptr.o
 BOBJS = $(addprefix $(OBJ_DIR), $(BSRCS:.c=.o))
 
-# Operating system differences, special sources
+# Operating system differences, preprocessor definition
 OS = $(shell uname)
-ifeq ($(OS), Darwin)
-	SSRCS = ft_print_ptr_macos.c
-else
-	SSRCS = ft_print_ptr_linux.c
+ifneq ($(OS), Darwin)
+	CFLAGS += -D LINUX
 endif
 
 # Make desired targets
