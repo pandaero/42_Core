@@ -57,10 +57,6 @@ $(NAME): $(OBJS)
 $(addprefix $(OBJ_DIR), %.o): %.c | $(OBJ_DIR)
 	$(CC) -c $(CFLAGS) $^ -o $@
 
-# Make specific object file
-obj/ft_print_ptr.o: $(SSRCS)
-	$(CC) -c $(CFLAGS) $^ -o $@
-
 # Make the object directory
 $(OBJ_DIR):
 	mkdir -p $(OBJ_DIR)
