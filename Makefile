@@ -35,12 +35,6 @@ OBJ_DIR := obj/
 OBJS = $(addprefix $(OBJ_DIR), $(SRCS:.c=.o)) obj/ft_print_ptr.o
 BOBJS = $(addprefix $(OBJ_DIR), $(BSRCS:.c=.o))
 
-# Operating system differences, preprocessor definition
-OS = $(shell uname)
-ifneq ($(OS), Darwin)
-	CFLAGS += -D LINUX
-endif
-
 # Make desired targets
 all: directories $(NAME)
 
