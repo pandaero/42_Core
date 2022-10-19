@@ -38,7 +38,7 @@ BOBJS = $(addprefix $(OBJ_DIR), $(BSRCS:.c=.o))
 # Make desired targets
 all: directories $(NAME)
 
-# Make desired directories
+# Make required directories
 directories: $(OBJ_DIR)
 
 # Make standard libft archive
