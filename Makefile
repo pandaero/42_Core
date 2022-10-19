@@ -32,7 +32,7 @@ BSRCS := ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c \
 			ft_lstmap.c 
 # Object files to create (in directory)
 OBJ_DIR := obj/
-OBJS = $(addprefix $(OBJ_DIR), $(SRCS:.c=.o)) obj/ft_print_ptr.o
+OBJS = $(addprefix $(OBJ_DIR), $(SRCS:.c=.o))
 BOBJS = $(addprefix $(OBJ_DIR), $(BSRCS:.c=.o))
 
 # Make desired targets
