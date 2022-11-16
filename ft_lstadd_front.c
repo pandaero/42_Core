@@ -17,12 +17,12 @@ Check that contents are non-null, assign NEW's NEXT to last 1st's, 1st to NEW.
 */
 #include "libft.h"
 
-void	ft_lstadd_front(t_list **lst, t_list *new)
+void	ft_lstadd_front(t_list **lst, t_list *newnd)
 {
-	if (!lst || !new)
+	if (!lst || !newnd)
 		return ;
-	new->next = *lst;
-	*lst = new;
+	newnd->next = *lst;
+	*lst = newnd;
 }
 
 /* Test

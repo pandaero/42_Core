@@ -96,13 +96,13 @@ void			ft_putnbr_fd(int n, int fd);
 //Function creates a new node in the linked list.
 t_list			*ft_lstnew(void *content);
 //Function sets a new node to the beginning of a linked list.
-void			ft_lstadd_front(t_list **lst, t_list *new);
+void			ft_lstadd_front(t_list **lst, t_list *newnd);
 //Function determines the number of nodes in the linked list.
 int				ft_lstsize(t_list *lst);
 //Function finds the last node of the linked list.
 t_list			*ft_lstlast(t_list *lst);
 //Function sets a new node to the end of a linked list.
-void			ft_lstadd_back(t_list **lst, t_list *new);
+void			ft_lstadd_back(t_list **lst, t_list *newnd);
 //Function deletes a node from a linked list.
 void			ft_lstdelone(t_list *lst, void (*del)(void *));
 //Function clears an entire linked list.

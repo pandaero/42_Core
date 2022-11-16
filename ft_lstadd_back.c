@@ -17,12 +17,12 @@ Check node is not already end, move to last using ft_lstlast and assign.
 */
 #include "libft.h"
 
-void	ft_lstadd_back(t_list **lst, t_list *new)
+void	ft_lstadd_back(t_list **lst, t_list *newnd)
 {
 	if (*lst == (void *) 0)
-		*lst = new;
+		*lst = newnd;
 	else
-		ft_lstlast(*lst)->next = new;
+		ft_lstlast(*lst)->next = newnd;
 }
 
 /* Test
